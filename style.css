@@ -1,0 +1,110 @@
+/* palette couleur pr la page:
+de la plus claire à la plus foncée:
+#faf2e4 div
+#d3c6b0 body
+#b2a183 div
+#927e5c txt
+mon rose #d23798
+*/
+
+/* body */
+body {	
+	background-color: #d3c6b0;	
+	font-family: 'Verdana', sans-serif;	
+	background-attachment: fixed;
+}
+
+/* header */
+.navbar {
+	background-color: #b2a183;
+	padding-bottom: 30px;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+ul{
+	list-style: none;
+}
+
+li {
+	background-color: #d3c6b0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.9em;
+	height: 70px;
+	max-height: 70px;
+	margin-right: 5px;
+}
+
+#titre {
+	width: 50%;
+	padding-left: 25px;
+}
+
+h1, h3 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3.5em;
+	font-weight: 900;
+}
+
+/* div 1: présentations */
+#présentation {
+	background-color: #faf2e4;
+	padding: 10px;
+	margin: 70px 14px 100px 14px;
+}
+
+#présentation p {
+	font-size: 1.3em;
+	text-align: justify;
+}
+
+/* div 2: mon travail */
+#row1, #row2 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.thumbnail {
+	background-color: #faf2e4;
+	margin-bottom: 100px;	
+}
+
+a {
+	color: #927e5c;
+}
+
+a:hover {
+	color: #d23798;
+}
+
+.caption {
+	margin-top: 15px;
+}
+
+/* div 3: contacts */
+#contacts {
+	background-color: #b2a183;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 100px;
+}
+
+#contacts i {
+	color: #d23798;
+}
+
+/* footer */
+footer {
+	background-color: #b2a183;
+	text-align: center;
+	margin-top: 60px;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+footer a {
+	color: #d23798;
+}
