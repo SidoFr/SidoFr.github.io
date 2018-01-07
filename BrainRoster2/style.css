@@ -1,0 +1,112 @@
+/* CSS GRID */
+/* palette couleurs:
+couleurs brain roster = 
+bleu canard #072e43
+vert #1abc9c
+#c3c7c6
+#b0b2b2
+#8c9392
+#748281
+#6d7675
+*/
+
+/* body */
+body {
+	font-family: 'Roboto', sans-serif;
+	
+}
+.wrapper {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 500px repeat(6, 300px) 320px 50px;
+	grid-gap: 5px;
+	background-color: #c3c7c6;
+}
+
+/* header */
+.header {
+	grid-column: 1 / -1;
+	background-color: #8c9392;
+	text-align: center;
+}
+
+/* menu */
+.menu {
+	position: fixed;
+	top: 50px;
+}
+ .form, .widget1, .widget2, .widget3 {
+
+	background-color: #072e43;
+	border: 2px solid #8c9392;
+	border-radius: 5px;
+}
+.menu ul {
+	padding-left: -15px;
+}
+li {
+	list-style-type: none;
+}
+h5 {
+	color: #1abc9c;
+	text-align: center;
+	font-weight: 900;
+	text-decoration: underline;
+}
+.menu a {
+	color: #8c9392;
+}
+.widget1 {
+	
+	font-weight: 900;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* content */
+.content {
+	grid-column: 3 / -1;
+}
+.content div {
+	background-color: #b0b2b2;
+	border: 3px solid #1abc9c;
+	border-radius: 5px;
+	margin-top: 20px;
+
+}
+.content div:not(:last-child) {
+	font-size: 1.2em;
+	text-align: justify;
+}
+#contacts {
+	text-align: center;
+}
+.content a {
+	color: #072e43;
+}
+#contacts input, #contacts textarea, #contacts button {
+	border: 2px solid #8c9392;
+	border-radius: 5px;
+}
+.fa-twitter {
+	color: #0c49d5;
+}
+h2 {
+	font-family: Oswald, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	color: #1abc9c;
+}
+
+/* footer */
+.footer {
+	grid-column: 1 / -1;
+	grid-row-end: -1;
+	text-align: center;
+	background-color: #072e43;
+}
+.footer a {
+	color: #d23798;
+}
