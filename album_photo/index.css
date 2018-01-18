@@ -1,0 +1,54 @@
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #b1be83;
+	font-family: 'Roboto Slab', serif;
+}
+
+/* header */
+header {
+	
+	text-align: center;
+}
+header > div {
+	border: 2px solid black;
+}
+
+/* big img */
+.big {
+	align-self: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+.big img {
+	border: 2px solid #f5fd7d;
+}
+
+/* menu */
+.menu {
+	align-self: center;
+}
+.menu p {
+	text-align: center;
+	font-size: 1.2em;
+	color: #f5fd7d;
+}
+.menu img {
+	width: 320px;
+	border: 2px solid #f5fd7d;
+	margin-left: 15px;
+}
+
+/* footer */
+footer {
+	
+	text-align: center;
+	padding-top: 40px;
+}
+footer a {
+	color: pink;
+}
+
+
