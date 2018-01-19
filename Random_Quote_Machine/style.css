@@ -1,0 +1,59 @@
+/* general */
+body {
+	display: flex;
+	background-color: grey;
+	flex-direction: column;
+	text-align: center;
+	font-family: 'Bellefair', serif;
+}
+.white {
+	background-color: white;	
+}
+.grey {
+	background-color: grey;
+	margin: 20px;
+}
+button {
+	background-color: grey;
+	font-family: 'Bellefair', serif;
+}
+
+/* content */
+#main {
+	width: 700px;
+	height: 260px;
+	margin: auto;
+	margin-top: 30px;
+}
+#quote {
+	background-color: white;
+	border: 10px solid grey;
+	width: 400px;
+	height: 160px;
+	margin: auto;
+	margin-top: 20px;
+}
+#newQuote {
+	padding: 15px 3px 0px 3px;
+}
+#button {
+	margin-top: 20px;
+}
+
+/* twitter box */
+#Twitter {
+	width: 300px;
+	height: 100px;
+	margin: auto;
+	margin-top: 100px;
+}
+
+/* footer */
+footer {
+	text-align: center;
+	margin-top: 40px;
+}
+footer a {
+	color: pink;
+}
+
