@@ -1,0 +1,218 @@
+/* 
+ANIMATION de figure. le container div faisant 100% de large.
+une img est affichée 20% du temps de l'animation.
+le changement d'img utilise 5% du temps de l'animation.
+dc ici, 5*5= 25% pr move et 75/5= 15% par img.
+la 6ème img est là pr éviter de casser l'anim.
+*/
+
+/* carrousel des insectes */
+@keyframes slider {
+	/* img 1 */
+	0% {left: 0%;}
+	15% {left: 0%;}
+	/* img 2 */
+	20% {left: -100%;}
+	35% {left: -100%;}
+	/* img 3 */
+	40% {left: -200%;}
+	55% {left: -200%;}
+	/* img 4 */
+	60% {left: -300%;}
+	75% {left: -300%;}
+	/* img 5 */
+	80% {left: -400%;}
+	95% {left: -400%;}
+	/* img 6 */
+	100% {left: -500%;}
+}
+/* carrousel des papillons et oiseaux */
+/* 4% pr mvt */
+@keyframes slide {
+	0% {left: 0%;}
+	8.5% {left: 0%;}
+
+	12.5% {left: -100%;}
+	21% {left: -100%;}
+
+	25% {left: -200%;}
+	33.5% {left: -200%;}
+
+	37.5% {left: -300%;}
+	46% {left: -300%;}
+
+	50% {left: -400%;}
+	58.5% {left: -400%;}
+
+	62.5% {left: -500%;}
+	71% {left: -500%;}
+
+	75% {left: -600%;}
+	83.5% {left: -600%;}
+
+	87.5% {left: -700%;}
+	96% {left: -700%;}
+
+	100% {left: -800%;}
+}
+/* nota bene: les img d'un carrousel doivent avoir la mm taille */
+
+/* slider papillons */
+#butterflies {
+	width: 100%;
+	max-width: 640px;
+	/* cache ce qui dépasse */
+	overflow: hidden;
+}
+/* figure = la bande d'img */
+#butterflies figure {
+	/* n img. 1 img = 100% du div */
+	width: 900%;
+	/* pr déplacement */
+	position: relative;
+	/* pr enlever tt espace */
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	/* pr contrer un bug de safari5 */
+	text-align: left;
+	/* appel de l'animation */
+	animation: 30s slide infinite;
+}
+#butterflies figure img {
+	width: 11.1112%;
+	height: 440px;
+	/* bug safari5 */
+	float: left;
+}
+
+/* slider insects */
+#insects {
+	width: 100%;
+	max-width: 640px;
+	overflow: hidden;
+}
+#insects figure {
+	width: 600%;
+	position: relative;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	animation: 30s slider infinite;
+}
+#insects figure img {
+	width: 16.667%;
+	height: 440px;
+	float: left;
+}
+
+/* slider birds */
+#birds {
+	width: 100%;
+	max-width: 640px;
+	overflow: hidden;
+}
+#birds figure {
+	width: 900%;
+	position: relative;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	animation: 30s slide infinite;
+}
+#birds figure img {
+	width: 11.1112%;
+	height: 430px;
+	float: left;
+}
+
+/* STYLE */
+body {
+	margin: 0;
+	background-image: url("fond2.jpg");
+	background-attachment: fixed;
+	background-repeat: no repeat;
+	font-family: 'Roboto', serif;
+	color: #e8ecf2;
+}
+header {
+
+	text-align: center;
+	border-radius: 5px;
+	margin: 10px 250px 0px 250px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #96abca;
+}
+header > h1 {
+	font-family: 'Risque', cursive;
+	font-size: 3em;
+}
+.box {
+	margin-top: 100px;
+}
+.carrousel {
+	margin: auto;
+}
+.album {
+	text-align: center;
+	margin: auto;
+	padding-top: 40px;
+}
+.album img {
+	border: 1px solid #96abca;
+	border-radius: 4px;
+}
+.album p {
+	background-color: #96abca;
+	font-size: 0.9em;
+	border-radius: 2px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 450px;
+	margin-right: 450px;
+}
+footer {
+	text-align: center;
+	background-color: #96abca;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	margin-top: 75px;
+
+}
+footer p:nth-child(2) {
+	font-family: 'Risque', cursive;
+	margin-bottom: 0;
+}
+footer a {
+	color: pink;
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 500px) {
+	header {
+		margin: auto;
+	}
+	.album p {
+		margin: auto;
+	}
+}
+@media all and (min-width: 501px) and (max-width: 1023px) {
+	header {
+	margin: auto;
+	}
+	.album p {
+		margin: auto;
+	}
+}
+@media all and (width: 1024px) {
+	header {
+		margin: 10px 100px 0 100px;
+	}
+	.album p {
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+}
