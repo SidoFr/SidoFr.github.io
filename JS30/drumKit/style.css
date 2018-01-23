@@ -34,7 +34,8 @@ body {
 	transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
-	border-color: pink;
+	border-color: #d23798;
+	box-shadow: 0 0 10px #d23798;
 }
 
 kbd {
