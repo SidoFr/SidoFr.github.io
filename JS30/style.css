@@ -1,0 +1,50 @@
+body {
+	background-color: #deeaef;
+	margin: 0;
+}
+/* header */
+header {
+	text-align: center;
+	border-bottom: 4px solid #026573;
+}
+.title {
+	font-family: 'Orbitron', sans-serif;
+	color: #026573;
+}
+header > p {
+	font-family: 'Roboto', sans-serif;
+	padding-left: 20px;
+}
+/* content */
+#content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: space-around;
+}
+.etiquette {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 40px;
+	font-family: 'Oswald', serif;
+	text-align: center;
+	vertical-align: center;
+	background-color: #96abca;
+	border: 3px solid #026573;
+}
+.btn {
+	position: absolute;
+	bottom: 15px;
+	left: 90px;
+}
+/* footer */
+footer {
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+	border-top: 4px solid #026573;
+	padding: 20px 0;
+}
+footer a {
+	color: pink;
+}
