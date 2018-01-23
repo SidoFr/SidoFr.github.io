@@ -92,6 +92,7 @@ header {
 .btn {
 	position: absolute;
 	bottom: 10px;
+	left: 140px;
 	background-color: #fffdd5;
 	border-radius: 3px;
 }
