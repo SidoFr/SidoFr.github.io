@@ -1,0 +1,45 @@
+body {
+	background-color: black;
+	margin: 0;
+}
+
+.keys {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.key {
+	width: 70px;
+	height: 70px;
+	border: 4px solid beige;
+	border-radius: 4px;
+	margin: 5px;
+	padding-top: 10px;
+	text-align: center;
+	background-color: grey;
+	color: beige;
+	/* in css transition allows to chge ppty smoothly(from a value to another) 
+	over a given duration. 'ease' specifies slow start, then fast, then end slowly. */
+	transition: all .07s ease;
+	-webkit-transition: all .07s ease;
+	-moz-transition: all .07s ease;
+}
+/* will be added with js. enlarge and change color */
+.playing {
+	/* transform ppty allows to rotate, translate, ..an elt.
+	scale method increases or decreases the size */
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	border-color: pink;
+}
+
+kbd {
+	font-size: 3em;
+}
+.sound {
+	color: pink;
+}

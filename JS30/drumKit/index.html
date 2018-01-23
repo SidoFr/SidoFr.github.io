@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>drum kit</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div class="keys">
+		<!-- <kbd> is a phrase tag. def keyboard input.
+		<span> is used to gp inline-elt. no visual change.provides a way to add a hook.
+		<data>This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+		Lie le div ac l'audio. -->
+		<div data-key="81" class="key">
+			<kbd>Q</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="83" class="key">
+			<kbd>S</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="68" class="key">
+			<kbd>D</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="70" class="key">
+			<kbd>F</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="71" class="key">
+			<kbd>G</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="72" class="key">
+			<kbd>H</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="74" class="key">
+			<kbd>J</kbd>
+			<span class="sound"></span>
+		</div>
+		<div data-key="75" class="key">
+			<kbd>K</kbd>
+			<span class="sound"></span>
+		</div>
+	</div>
+
+	<audio data-key="81" src="sounds/drum_stick.wav"></audio>
+	<audio data-key="83" src="sounds/big-drum.wav"></audio>
+	<audio data-key="68" src="sounds/cymbol.wav"></audio>
+	<audio data-key="70" src="sounds/drum1.wav"></audio>
+	<audio data-key="71" src="sounds/hi_hat.wav"></audio>
+	<audio data-key="72" src="sounds/hi_hat2.wav"></audio>
+	<audio data-key="74" src="sounds/ride.wav"></audio>
+	<audio data-key="75" src="sounds/bells.wav"></audio>
+
+	<footer>
+		<p>Thanks to free-loops.com for all free sounds!</p>
+	</footer>
+</body>
+</html>
