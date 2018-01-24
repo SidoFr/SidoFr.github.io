@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.clock {
+	width: 30rem;
+	height: 30rem;
+	border: 20px solid pink;
+	border-radius: 50%;
+	margin: 50px auto;
+	padding: 1.5rem;
+	position: relative;
+	box-shadow: 0 0 20px beige,
+	0 0 100px pink;
+}
+/* .aiguille parent */
+.clock-frame {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* pr chipoter, on recentre sr l'axe des Y pr tenir compte de la hauteur des aiguilles */
+	transform: translateY(-3px);
+}	
+.aiguille-hr {
+	width: 35%;
+	height: 6px;
+	background-color: beige;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	transition: all 0.05s;
+	-webkit-transition: all 0.05s;
+	-moz-transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+	-moz-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.aiguille-mn {
+	width: 50%;
+	height: 6px;
+	background-color: beige;
+	position: absolute;
+	top: 50%;
+	/* placer les aiguilles verticalement, changer origine pr rotation comme des aiguilles */
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	/* comment les aiguilles bougeront.
+	transition:0.05s; pr un mvt doux.
+	transition-timing-function:"specifies the speed curve of the transition effect".
+	ex de valeur: ease-and-out pr qqch de très doux,
+	le cubic bezier permet d'obtenir un mvt "rebond" pr plus de réalisme.  */
+	transition: all 0.05s;
+	-webkit-transition: all 0.05s;
+	-moz-transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+	-moz-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.aiguille-s {
+	width: 50%;
+	height: 3px;
+	background-color: black;
+	position: absolute;
+	top: 50%;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	transition: all 0.05s;
+	-webkit-transition: all 0.05s;
+	-moz-transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+	-moz-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+footer {
+	text-align: center;
+	padding: 15px 0;
+}
+footer a {
+	color: pink;
+}
