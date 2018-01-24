@@ -1,0 +1,66 @@
+/*les variables ds css, c'est quoi?
+	permet de changer la valeur des propriétés css de plrs éléments en mm tps.
+	ex, je def une variable "text-color" et je l'applique ensuite en tant q valeur ds mon css:
+	p{color: var(--text-color);}
+	les variables css doivent être déclarées ds un sélecteur qui def son scope.
+	global scope: :root ou body.
+	le nom de la variable doit commencer ac --
+	var(custom-name, value)
+	*/
+
+/* variables and use */
+		/* déclaration ac valeur de base */
+		:root {
+			--base: #ff80c0;
+			--spacing: 10px;
+			--blur: 10px;
+		}
+
+		img {
+			padding: var(--spacing);
+			background-color: var(--base);
+			filter: blur(var(--blur));
+		}
+		.h1 {
+			color: var(--base);
+		}
+		footer a {
+			color: var(--base);
+			padding: 10px 0;
+		}
+
+		/* */
+		body {
+			margin: 0;
+			background-color: #96abca;
+			color: beige;
+			font-family: 'helvetica neue', sans-serif;
+			text-align: center;
+		}
+		h1 {
+			border-bottom: 2px solid beige;
+			padding: 20px 0;
+		}
+		.controls {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			font-size: 30px;
+			margin-top: 50px;
+			margin-bottom: 50px;		
+		}
+		.input {
+			width: 200px;
+			margin: 15px;
+			border-radius: 7px;
+		}
+		img {
+			border-radius: 5px;
+			box-shadow: 0 0 30px pink,
+			0 0 10px blue,
+			inset 0 0 20px beige;
+		}
+		footer {
+			margin-top: 50px;
+		}	
