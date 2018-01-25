@@ -1,0 +1,141 @@
+body {
+	background-image: url(img/sun.jpg);
+	background-repeat: no-repeat;
+	font-family: 'Bree Serif', serif;
+	margin: 0;
+
+}
+header {
+	text-align: center;
+	color: grey;
+	font-size: 2em;
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+
+/* case 1 */
+.main, #coords, #plus {
+	opacity: 0.9;
+}
+.main p {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.main {
+	width: 400px;
+	height: 330px;
+	box-shadow: 6px 6px 30px black,
+	inset 4px 4px 30px white;
+	border-radius: 5px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: auto;
+	padding-top: 5px;
+}
+
+/* case 2 et 3 */
+.container {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 50px;
+}
+#coords, #plus {
+	text-align: center;
+	width: 250px;
+	height: 200px;
+	box-shadow: 5px 5px 20px grey,
+	inset 3px 3px 20px black;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding-top: 5px;
+}
+.container p {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+/* clock */
+.clock {
+	position: relative;
+	width: 110px;
+	height: 110px;
+	padding: 5px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 6px solid black;
+	border-radius: 10px;
+	box-shadow: 0 0 40px white,
+	inset 0 0 40px black;
+}
+.frame {
+	width: 100%;
+	height: 100%;
+	transform: translateY(-2px);
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-1.5px);
+}
+.hand {
+	transform-origin: 100%;
+	-webkit-transform-origin: 100%;
+	-moz-transform-origin: 100%;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transition: all 0.05s;
+    -webkit-transition: all 0.05s;
+    -moz-transition: all 0.05s;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out; 
+}
+.hr-hand {
+	width: 35%;
+	height: 4px;
+	position: absolute;
+	top:50%;
+	left: 15%;
+	background-color: black;
+}
+.mn-hand {
+	width: 50%;
+	height: 4px;
+	position: absolute;
+	top: 50%;
+	background-color: black;
+
+}
+.sec-hand {
+	width: 50%;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	background-color: white;
+}
+
+/* button */
+#button {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 200px;
+}
+button {
+	font-family: 'Bree Serif', serif;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: beige;
+	border-radius: 5px;
+	box-shadow: 0 0 10px white;
+	padding: 5px 10px 5px 10px;
+}
+
+/* footer */
+footer {
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.9em;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 10px grey;
+	padding-bottom: 5px;
+}
+footer a {
+	color: pink;
+}
+
+/* media queries */
