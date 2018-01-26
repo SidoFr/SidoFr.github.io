@@ -1,0 +1,92 @@
+html {
+	background-color: grey;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: 'helvetica neue';
+	box-sizing: border-box;
+}	
+body {	
+	margin: 0;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.panels {
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+}
+/* each panel. nested flexbox */
+.panel {
+	background-color: yellow;
+	color: beige;
+	text-align: center;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	font-size: 20px;
+	/* transition text, panel and background */
+	/* note for js: safari transitionend event.propertyName === flex
+	chrome and FF transitionend event.propertyName === flex-grow */
+	transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+				flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+				background 0.2s; 
+	box-shadow: 0 0 20px grey,
+				0 0 5px white;			
+}	
+
+.panel1 { background-image: url(img/fog.jpg); }
+.panel2 { background-image: url(img/storm.jpg); }
+.panel3 { background-image: url(img/sunny.jpg); }
+.panel4 { background-image: url(img/sun.jpg); }
+.panel5 { background-image: url(img/heavy_clouds.jpg); }
+
+/* panel children. nested flexbox */
+.panel > * {
+	margin: 0;
+	width: 100%;
+	transition: transform 0.5s;
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* paragraphes */
+.panel > p {
+	font-family: 'Amatic SC', cursive;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-shadow: 0 0 2px black,
+				0 0 10px white;
+}
+.panel > p:nth-child(2) {
+	font-size: 4em;
+}
+#footer {
+	font-size: 15px;
+}
+/* hide upper and lower text when panels are stretched(default)
+this way, when transform is out(open-active), text appears */
+.panel > *:first-child {
+	transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+	transform: translateY(0);
+}
+.panel > *:last-child {
+	transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+	transform: translateY(0);
+}
+
+/* other added class to panel*/
+.panel.open {
+	font-size: 40px;
+	flex: 5;
+}

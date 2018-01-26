@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>flex panels gallery</title>
+	<meta charset="utf-8">
+	<meta>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+<body>
+	<div class="panels">
+		<div class="panel panel1">
+			<p>hey</p>
+			<p>let's</p>
+			<p>dance</p>
+		</div>
+		<div class="panel panel2">
+			<p>give</p>
+			<p>take</p>
+			<p>receive</p>
+		</div>
+		<div class="panel panel3">
+			<p>experience</p>
+			<p>it</p>
+			<p>today</p>
+		</div>
+		<div class="panel panel4">
+			<p>give</p>
+			<p>all</p>
+			<p>you can</p>
+		</div>
+		<div class="panel panel5">
+			<p>live</p>
+			<p>in</p>
+			<p>motion<br><em id="footer"><i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fa fa-github" aria-hidden="true"></i></a><br>
+	<a href="https://twitter.com/SidoMee" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></em></p>
+		</div>
+	</div>
+
+	<script>
+		const panels = document.querySelectorAll('.panel');
+		//create function to toggle to the class open
+		function toggleOpen() {
+			this.classList.toggle('open');
+		}
+		function toggleActive(evt) {
+			//2 elts are concerned by transition font-size et flex
+			//we listen to flex event 
+			
+			//includes plutôt q === à cause des bug de navigateurs(cf css)
+			if(evt.propertyName.includes("flex")) {
+				this.classList.toggle('open-active');
+			}
+		}
+		//listen to click event for open
+		panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+		//then listen to transitionend event for open-active
+		panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+	</script>
+</body>
+</html>
