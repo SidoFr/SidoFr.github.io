@@ -1,0 +1,72 @@
+NOTES:
+
+AJAX
+Asynchronous Javascript Xml
+désigne une approche utilisant un ens de tech.
+(voir guide dev mozilla)
+permet de réaliser des màj rapides et incrémentielles de l'interface utilisateur ss devoir 
+recharger la page entière du nav.
+les applications fonctionnent plus rapidement et st plus réactives aux actions de l'utilisateur.
+approche qui a dc des avantages mais aussi des inconvénients, à utiliser selon les besoins.
+
+REGEXP
+The RegExp constructor creates a regular expression object for matching text with a pattern.
+syntax: /textofregularexp/flags
+ex of flags: g= global  i= insensitive u= unicode
+l'expression peut-être un ou plrs caractères spéciaux.
+ex: \w = any alphanumeric character \W = tt caractère qui n'est pas alphanumérique
+\s single white space  \t horizontal tab .....
+* means zero or more occurences of the preceding character
+(more on doc)
+
+méthode .JOIN()
+joins all elt of an array into a string and returns this string.
+
+le constructeur PROMISE
+l'obj promise est utilisé pr effectuer des traitements de façon asynchrone.Une promesse rep une valeur
+qui pt ê dispo maintenant, ds le futur, ou jamais.
+new Promise (function (resolve, reject){...});
+resolve = tenir promesse reject= rompre promesse
+promise rep un intermédiaire pr une valeur pas encore connue.elle est ds un des états suivants:
+pending, fulfilled, rejected, settled.
+(voir guide "utiliser les promesses" dev mozilla).
+
+la méthode .THEN() renvoie un objet PROMISE.
+Elle pt prendre 2 argt qui st des callback en cas de complétion ou d'échec de la promesse.
+p.then(siTenue);
+p.then(siTenue, siRejetée);
+
+p.then(function(valeur) {
+    // Promesse tenue
+  }, function(raison) {
+    // Rejet de la promesse
+});
+
+FETCH (es6)
+fourni une interface js pr la manipulation desparties de la pipeline http.
+fourni une méthode .FETCH() pr obtenir des ressources à travers le réseau.
+requête fetch basique = 
+var myImage = document.querySelector('img');
+
+fetch('flowers.jpg')
+.then(function(response) {
+  return response.blob();
+})
+.then(function(myBlob) {
+  var objectURL = URL.createObjectURL(myBlob);
+  myImage.src = objectURL;
+});
+
+BLOB 
+(binary large object)
+objet immuable semblable à un fichier qui contient des données brutes.
+pas ds un format js natif.
+-> constructeur = blob()
+le constructeur blob() permet de créer des blobs à partir d'autres objets.
+on pt lui appliquer la méthode slice()
+on ne pt lire le contenu d'un blob qu'avec un FileReader.
+
+.TOSTRING()
+array.troString() renvoie une chaîne de caractères rep le tableau spécifié et ses élts.
+
+

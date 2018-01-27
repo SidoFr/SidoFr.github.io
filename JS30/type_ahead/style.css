@@ -1,0 +1,87 @@
+/* palette from colorhunt.co
+#f6378f rose
+#ffdd00 jaune
+#f5efe8 gris clair
+#8ea5eb bleu pâle
+ */
+
+html {
+	background-color: #ffdd00;
+	margin: 0;
+	font-family: 'Lucida sans Unicode';
+	font-size: 20px;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.search-form {
+	max-width: 400px;
+	margin: 50px auto;
+}
+
+input {
+	width: 100%;
+	padding: 20px;
+	border: 5px solid #f6378f;
+	background-color: #f5efe8;
+}
+input.search {
+	margin: 0;
+	text-align: center;
+	/* set the outline around <p> */
+	outline: 0;
+	width: 120%;
+	/* centers what's bellow */
+	left: -10%;
+	position: relative;
+	top: 10px;
+	z-index: 2;
+	border-radius: 3px;
+}
+
+.suggestions {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.suggestions li{
+	background-color: #f5efe8;
+	border-bottom: 2px solid #8ea5eb;
+	margin: 0;
+	padding: 20px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	text-transform: capitalize;
+	box-shadow: 0 0 2px black;
+	transition: background 0.2s;
+}
+
+/* children */
+.suggestions li:nth-child(even) {
+	transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+	background: linear-gradient(to bottom, #ffffff 0%, #f5efe8 100%);
+}
+.suggestions li:nth-child(odd) {
+	transform: perspective(100px) rotateX(-3deg) translateY(3px);
+	background: linear-gradient(to top, #ffffff 0%, #f5efe8 100%);
+}
+
+/* added span with js */
+span.population {
+	font-size: 15px;
+}
+/* added hl class with js */
+.hl {
+	background-color: #f6378f;
+}
+
+footer {
+	text-align: center;
+	font-size: 10px;
+	margin-top: 100px;
+}
+footer a{
+	color: #8ea5eb;
+}
