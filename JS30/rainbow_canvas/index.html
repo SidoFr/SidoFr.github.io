@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rainbow Canvas</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<canvas id="draw" width="800" height="800"></canvas>
+
+<script>
+	const canvas = document.querySelector("#draw");
+	//context: where we actually draw
+	const ctx = canvas.getContext("2d");
+	 //size by default = 800*800
+	 canvas.width = window.innerWidth;
+	 canvas.height = window.innerHeight;
+	 //basic settings
+
+	 //ctx.strokeStyle = 'black';
+	 ctx.lineJoin = 'round'; //check mdn for more options
+	 ctx.lineCap = 'round';
+	 ctx.lineWidth = 30;
+
+	 //another "just for fun" = global composite operator
+	 //see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation for values
+	// ctx.globalCompositeOperation = 'difference';
+
+	//more color fun with hsl (Hue Saturation Lightness).(Hue from 0 to 360 pass to every color from red to red again).
+	 let hue = 0; //init
+
+	 let direction = true;
+
+	 //flag to tell if drawing or just mouse going through page
+	 //set it to false
+	 let isDrawing = false;
+	 let lastX = 0;
+	 let lastY = 0;
+
+	 function draw (evt) {
+	 	if(!isDrawing) return; //= stop running if mouse not down
+	 	console.log(evt);
+	 	//set color with hsl, hue is the variable.
+	 	ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;  //hue, Saturation, Lightness
+	 	//now we can actually begin drawing
+	 	ctx.beginPath();
+	 	ctx.moveTo(lastX, lastY); // = start from
+	 	//see offset in console log
+	 	ctx.lineTo(evt.offsetX, evt.offsetY); // = go to
+	 	ctx.stroke();
+	 	[lastX, lastY] = [evt.offsetX, evt.offsetY]; // = lastX = evt.offsetX; lastY = evt.offsetY;
+	 	
+	 	hue ++;
+	 	//reset hue. not necessary
+	 	if(hue >= 360) {
+	 		hue= 0;
+	 	}
+
+/*	 	//play with lineWidth, ++ then --, etc...
+	 	if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+	 		direction = !direction; //flip direction
+	 	}
+	 	if(direction) {
+	 		ctx.lineWidth ++;
+	 	}else {
+	 		ctx.lineWidth --;
+	 	}
+	 	*/
+	 }
+
+	 canvas.addEventListener('mousedown', (evt)=> {
+	 	isDrawing = true;
+	 	//update lastX and lastY so that we don't draw a continuous line
+	 	[lastX, lastY] = [evt.offsetX, evt.offsetY];
+	});	
+
+	 canvas.addEventListener('mousemove', draw);
+	 //error fn with listener
+	 
+	 canvas.addEventListener('mouseup', ()=> isDrawing = false);
+	 canvas.addEventListener('mouseout', ()=> isDrawing = false);
+</script>
+<style>
+	html, body {
+		margin: 0;
+	}
+</style>
+</body>
+</html>
