@@ -1,0 +1,120 @@
+<!-- how to help user so that when two boxes are checked the ones between them are checked too (ex, emails list)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>multiple checkboxes</title>
+	<meta charset="utf-8">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<style>
+		html, body {
+			margin: 0;
+			background-color: #96abca;
+			font-family: 'Courier New';
+		}
+		.inbox {
+			width: 300px;
+			margin: 25px auto;
+			background-color: #026573;
+			color: grey;
+			border: 5px solid grey;
+			border-radius: 10px;
+			box-shadow: 0 0 15px #026573;
+		}
+		.item {
+			margin-top: 10px;
+			margin-left: 5px;
+		}
+		.inbox p {
+			padding: 0 5px;
+			margin: 0 0 10px 0;
+		}
+		footer {
+			margin-top: 50px;
+			text-align: center;
+			font-size: 0.7em;
+		}
+		footer a {
+			color: pink;
+		}			}
+	</style>
+
+<div class="inbox">
+	<div class="item">
+		<input type="checkbox">
+		<p>checkbox one</p>
+	</div>
+	<div class="item">
+		<input type="checkbox">
+		<p>hold down Shift key</p>
+	</div>
+	<div class="item">
+		<input type="checkbox">
+		<p>check another box</p>
+	</div>
+	<div class="item">
+		<input type="checkbox">
+		<p>everything in between should be checked</p>
+	</div>
+	<div class="item">
+		<input type="checkbox">
+		<p>using vanilla javascript</p>
+	</div>
+	<div class="item">
+		<input type="checkbox">
+		<p>check check check!</p>
+	</div>
+	<div class="item">
+		<input type="checkbox">
+		<p>check check check!</p>
+	</div>
+</div>
+<footer>
+	<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fa fa-github" aria-hidden="true"></i></a><br>
+	<a href="https://twitter.com/SidoMee" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+</footer>
+
+	<script>
+		const checkboxes = document.querySelectorAll('input');
+		//events must be kept in variables to keep track
+		let firstChecked;
+
+		function handleCheck(event) {
+			let inBetween = false;
+
+			//console.log(this, "this");
+			//console.log(firstChecked, "1st");
+
+			//checked if shift key down
+			//and check if checking and not unchecking
+			if(event.shiftKey && this.checked) {
+				//loop through checkboxes and find 1st and 2d check
+				//this way even if html is changed, it works
+				checkboxes.forEach(checkbox => {
+					if(checkbox === this || checkbox === firstChecked) {
+						//inBetween = true between both checked boxes. 
+						inBetween = !inBetween;
+					}
+
+					if(inBetween){
+						checkbox.checked = true;
+					}
+				});
+			}
+			firstChecked = this; //checkbox just clicked
+		}
+		checkboxes.forEach(checkbox=> checkbox.addEventListener('click', handleCheck));
+	</script>
+
+</body>
+</html>
+
+<!-- qq explications.
+	handleCheck est lancée chq fois q click, mais ne lance la vérif 'inBetween'slmt si shiftKey.
+
+	dc si pas shiftKey, ça vérif le if et ça dit ok, firstChecked = this.
+
+	si une shiftKey(ET une 'just clicked'!!), ça vérifie pr chq box si c'est la this (= celle qui vient d'être cliquée) ou la first (= celle cliquée juste avt) et si c'est l'une ou l'autre, inBetween devient true, puis qd il rencontre l'autre inBetween devient false.
+	-->
