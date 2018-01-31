@@ -18,7 +18,8 @@ body {
 
 .player {
   max-width:750px;
-  border:5px solid #ff8c94;
+  border:5px solid grey;
+  border-radius: 3px;
   box-shadow:0 0 20px #ffd3b5;
   position: relative;
   font-size: 0;
