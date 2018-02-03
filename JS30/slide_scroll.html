@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>slide in images on scroll</title>
+	<style>
+	/* palette colorhunt.co/c/106736
+	#8e1d41
+	#dbbf0d
+	#ffcd19
+	#ffefb4 */
+		html {
+			margin: 0;
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		body {
+			background-color: #8e1d41;
+		}
+		.first {
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		.slide-in {
+			width: 200px;
+			height: 200px;
+		}
+		.one {
+			background-color: #dbbf0d;
+		} 
+		.two {
+			background-color: #ffcd19;
+		}
+		.three {
+			background-color: #ffefb4;
+		}
+		.container {
+			width: 50%;
+			background-color: white;
+			margin: auto;
+			text-align: justify;
+			padding: 10px;
+		}
+		.align-left {
+			float: left;
+			margin-right: 10px;
+		}
+		.align-right {
+			float: right;
+			margin-left: 10px;
+		}
+		/*  slide effect style */
+		.slide-in {
+			opacity: 0;
+			transition: all 0.5s;
+		}
+		.align-left.slide-in {
+			transform: translateX(-50%) scale(0.95);
+		}
+		.align-right.slide-in {
+			transform: translateX(50%) scale(0.95);
+		}
+		.slide-in.active {
+			opacity: 1;
+			transform: translateX(0%) scale(1);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p class="first">Not the most beautiful effect but a lot to learn about window and window event</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut lectus ut orci tempus volutpat a id eros. Aenean eget aliquet erat. Donec lobortis faucibus urna, gravida mollis lacus auctor a. Praesent vehicula blandit massa, id tincidunt tortor commodo quis. Proin finibus egestas lorem, nec pellentesque metus sollicitudin at. Praesent accumsan ultrices dolor non ultricies. Duis aliquam volutpat varius. Sed imperdiet mollis nibh, ut interdum justo. Maecenas finibus turpis mollis sapien aliquam, a molestie quam tempor. Praesent scelerisque congue efficitur. Quisque viverra, odio ut sodales vulputate, tortor nibh semper risus, maximus dictum lacus sem vel sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et scelerisque leo, non placerat lacus. Donec ut nunc eget tortor mollis bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut lectus ut orci tempus volutpat a id eros. Aenean eget aliquet erat. Donec lobortis faucibus urna, gravida mollis lacus auctor a. Praesent vehicula blandit massa, id tincidunt tortor commodo quis. Proin finibus egestas lorem, nec pellentesque metus sollicitudin at. Praesent accumsan ultrices dolor non ultricies. Duis aliquam volutpat varius. Sed imperdiet mollis nibh, ut interdum justo. Maecenas finibus turpis mollis sapien aliquam, a molestie quam tempor. Praesent scelerisque congue efficitur. Quisque viverra, odio ut sodales vulputate, tortor nibh semper risus, maximus dictum lacus sem vel sapien.<div class="slide-in align-left one"></div> Maecenas dui odio, feugiat vel malesuada nec, laoreet eget dui.</p>
+		<p>Aenean vehicula ullamcorper nibh non hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec laoreet, ex tincidunt vulputate ultrices, sem risus faucibus risus, in eleifend nulla neque et est.<div class="slide-in align-right two"></div> Ut condimentum enim eu risus iaculis interdum. Praesent ac ornare justo, a finibus libero. Maecenas augue quam, varius non justo ut, faucibus fermentum dui. Aliquam eget semper tellus, at mollis quam. Integer tincidunt augue et justo tincidunt, id congue magna efficitur. Ut ut sollicitudin dui, id varius erat. Aenean id laoreet nulla. Quisque libero dolor, ornare vitae finibus ut, gravida euismod dui. Fusce imperdiet, mauris ac volutpat scelerisque, justo augue pharetra nisi, nec venenatis purus orci quis eros. Mauris luctus dictum libero, sed feugiat erat vulputate sed. Duis ante dolor, mollis eu odio quis, luctus blandit justo. Maecenas facilisis malesuada pharetra. Nulla mollis magna quis cursus mattis.</p>
+		<p>Nam placerat massa sed erat consequat euismod. Duis a sem varius, consectetur magna id, ullamcorper elit. Ut a velit pretium, posuere mi id, dictum libero. Aenean mattis porttitor nisi vel fringilla. Fusce commodo augue nec ornare tempor.<div class="slide-in align-left three"></div> Donec sit amet auctor orci. Proin ultrices mi eu malesuada consequat. Mauris elementum mi sit amet lacus tincidunt, et dapibus felis tincidunt. Pellentesque vehicula, erat nec lacinia sollicitudin, libero magna egestas dui, id pulvinar sapien mauris vitae sapien. Donec sit amet rutrum libero. Duis non lectus nec ligula luctus maximus vitae sit amet libero. Praesent dapibus vulputate metus a porttitor.</p>
+		<p>Aliquam lacinia dapibus suscipit. Etiam tortor augue, lacinia eu gravida et, blandit laoreet nunc. Sed hendrerit nec quam vitae rutrum. Donec vestibulum pharetra feugiat. Aenean eget eleifend sapien, eu maximus leo. Suspendisse orci neque, posuere sit amet erat id, iaculis egestas massa. Mauris tincidunt lobortis ante eget ultricies.</p>
+		<p>Maecenas pretium dignissim ex vel congue. Suspendisse non urna lectus. Curabitur commodo nulla in augue accumsan, vitae suscipit odio interdum. In at justo dignissim, blandit elit vel, tincidunt ante. Vivamus porta congue eleifend. In sit amet justo erat.<div class="slide-in  align-right one"></div> Praesent in turpis enim.</p>
+		<p>Aliquam at magna euismod magna ultrices facilisis at sed risus. Maecenas eu gravida ipsum. Aliquam suscipit mi in ullamcorper vehicula. Aenean mollis ipsum ut fermentum egestas. Suspendisse vehicula pulvinar porttitor. Mauris diam dolor, pretium commodo efficitur ac, auctor vulputate ligula. In quis quam id neque sodales sodales semper eget est. Aliquam malesuada convallis porta. Cras ac imperdiet nisl. Pellentesque vehicula lacinia nisl a fermentum. Maecenas sit amet viverra velit, at laoreet tellus.<div class="slide-in align-left two"></div> Donec facilisis ligula ut augue rutrum, sit amet dapibus eros sollicitudin. Nulla pretium lacinia eros vitae mollis. Vestibulum ut malesuada purus, in commodo nibh. Etiam luctus tincidunt ullamcorper. Etiam lacus felis, rutrum id pellentesque a, porttitor non ipsum.</p>
+		<p>Nulla venenatis sit amet quam in dictum. Nam mi justo, condimentum sit amet suscipit sit amet, fermentum sed leo. Pellentesque nec nisi iaculis, tristique quam nec, dapibus nisl. Ut eu pretium lacus. Pellentesque semper nisi quam, eu lacinia lacus finibus eget. Donec nec tortor vel arcu cursus efficitur non at sapien. Etiam lacinia neque nibh, in rutrum est porttitor vitae. Quisque sollicitudin urna a sem blandit, at bibendum nisl tristique. Curabitur pretium egestas est id tristique. Sed vel rhoncus erat. Curabitur et porta tortor. Cras interdum ultricies faucibus. Integer molestie, lectus sit amet posuere molestie, augue ipsum finibus nibh, ut venenatis turpis lorem ut velit. In vitae bibendum augue.</p>
+		<p>Fusce dapibus et diam ac porttitor. Morbi porttitor ante hendrerit, egestas nibh in, tempus libero. Aenean eu nisl lorem. Pellentesque ultricies lobortis vestibulum.<div class="slide-in align-right three"></div> Maecenas venenatis eget dolor et consectetur. Nam id suscipit nulla. Phasellus sit amet tortor nec eros feugiat molestie.</p>
+		<p>Fusce dapibus et diam ac porttitor. Morbi porttitor ante hendrerit, egestas nibh in, tempus libero. Aenean eu nisl lorem. Pellentesque ultricies lobortis vestibulum. Maecenas venenatis eget dolor et consectetur. Nam id suscipit nulla. Phasellus sit amet tortor nec eros feugiat molestie.Fusce dapibus et diam ac porttitor. Morbi porttitor ante hendrerit, egestas nibh in, tempus libero. Aenean eu nisl lorem. Pellentesque ultricies lobortis vestibulum. Maecenas venenatis eget dolor et consectetur. Nam id suscipit nulla. Phasellus sit amet tortor nec eros feugiat molestie.Fusce dapibus et diam ac porttitor. Morbi porttitor ante hendrerit, egestas nibh in, tempus libero. Aenean eu nisl lorem. Pellentesque ultricies lobortis vestibulum. Maecenas venenatis eget dolor et consectetur. Nam id suscipit nulla. Phasellus sit amet tortor nec eros feugiat molestie.</p>
+</div>
+<!-- nb: à la base l'exercice se ft ac des img, j'ai choisi de fr des div colorés, pr des img on ira chercher la .height et nn la style.height. -->
+<script>
+	window.onload = init;
+	function init() {
+		//THIS IS A DEBOUNCE FN
+		//explanation: we create a listener on scroll but it will return dozens of events for what we think is one scroll.(to understand try the event listener without the fn and console.log the event).
+		// the fn is here to say: call the fn only once in a while
+		function debounce(func, wait = 10, immediate = true) { //20ms
+			var timeout;
+			return function() {
+				var context = this, args = arguments;
+				var later = function() {
+					timeout = null;
+					if(!immediate) func.apply(context, args);
+				};
+				var callNow = immediate && !timeout;
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+				if(callNow) func.apply(context, args);
+			};
+		};
+
+		const sliders = document.querySelectorAll('.slide-in');
+		function slide() {
+			sliders.forEach(slider => {
+				//we want img to slide in when we scroll HALF way to them
+				//scrollY ppty = pageXOffset ppty = returns the pixels the window has been scrolled (here vertically) from the upper left corner
+				const slideInAt = (window.scrollY + window.innerHeight) - slider.style.height / 2; //this way we can add pictures or text, no need to recalculate
+
+				//get bottom of img, so that it slides back when we need it to
+				//offsetTop is the distance between the top of the img and the top of window
+				const sliderBottom = slider.offsetTop + slider.style.height;
+				const isHalfShown = slideInAt > slider.offsetTop;
+				const isNotScrolledPast = window.scrollY < sliderBottom;
+			
+				if(isHalfShown && isNotScrolledPast) {
+					slider.classList.add('active');
+					console.log("hello");
+				}
+				else {
+					slider.classList.remove('active');
+				}
+
+
+			})
+		}
+		window.addEventListener('scroll', debounce(slide));
+	}
+</script>
+</body>
+</html>
