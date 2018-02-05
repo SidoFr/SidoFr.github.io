@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>local storage</title>
+	<meta charset="utf-8">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+	<style>
+		html {
+			margin: 0;
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		body {
+			background-color: #a2ef44;
+			color: #08085e;
+			font-family: 'Courier New';
+		}
+		.container {
+			max-width: 350px;
+			margin: 100px auto;
+			text-align: center;
+			padding: 10px;
+			background-color: #fff07a;
+			box-shadow: 0 0 20px #08085e;
+		}
+		h1, h3 {
+			text-transform: uppercase;
+		}
+		ul {
+			padding: 0;
+		}
+		li {
+			list-style-type: none;
+			border-bottom: 1px solid #08085e;
+		}
+		.plates label {
+			cursor: pointer;
+		}
+		.check-all, .clear {
+			border-radius: 5px;
+			margin: 30px;
+			cursor: pointer;
+		}
+		.submit {
+			max-width: 150px;
+			background-color: #fff07a;
+			color: #08085e;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 15px;
+			cursor: pointer;
+		}
+		footer {
+			text-align: center;
+			margin-top: 100px;
+		}
+		footer a {
+			color: pink;
+			text-shadow: 0 0 1px #08085e;
+		}
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>make your own wrap!</h1>
+		<h3>list your ingredients bellow</h3>
+		<ul class="plates">
+		</ul>
+		<form class="add-items">
+			<input type="text" name="item" placeholder="item name"required>
+			<input type="submit" value="+ add item">
+		</form>
+		<button class="check-all">Check All</button>
+		<button class="clear">Clear Choice</button>
+	</div>	
+	<button class="submit">Send Choice!</button>
+	<footer>
+	<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+	<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+</footer>
+</body>
+</html>
