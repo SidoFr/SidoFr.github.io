@@ -368,3 +368,38 @@ footer a {
 .err-msg {
 	align-self: center;
 }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 500px) {
+	/* header */
+	.titre {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.icon {
+		width: 150px;
+		height: 125px;
+	}
+	.header h1 {
+		margin: 45px 0;
+	}
+	/* geo */
+	.geo {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.adresses {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+@media all and (min-width: 750px) and (max-width: 1024px) {
+	.cartes-container {
+		justify-content: normal;
+	}
+}
