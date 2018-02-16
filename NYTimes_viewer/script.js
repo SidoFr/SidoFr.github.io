@@ -3,7 +3,7 @@ window.onload = init;
 function init() {
 	var searchForm = document.querySelector('.form form');
 	var section = document.querySelector('.results');
-	const baseUrl = 'http://api.nytimes.com/svc/movies/v2/reviews/search.json';
+	const baseUrl = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json';
 	const key = 'c4c3fd5ca9af4c87bafd925520f34dee';
 	var submitBtn = searchForm.querySelector('.submit');
 	var openDate = searchForm.querySelector('.opening-date');
