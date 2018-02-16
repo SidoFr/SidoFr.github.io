@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NYTimes Viewer</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Oswald" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<style>
+	body {
+		margin: 0;
+		box-sizing: border-box;
+		background-color: #5628b4;
+		font-family: 'Roboto', sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+	h1 {
+		margin: 50px 0;
+		font-family: 'Oswald', serif;
+		font-size: 3.5em;
+		color: #f7b236;
+		text-align: center;
+	}
+	.form {
+		width: 400px;
+		height: 350px;
+		background-color: #d80e70;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		font-weight: bold;
+	}
+	.form  * {
+		margin: 10px 5px;
+	}
+	.form button {
+		border-radius: 3px;
+		color: #d80e70;
+		font-weight: bold;
+		box-shadow: 0 0 5px grey;
+	}
+	.search {
+		width: 250px;
+		height: 35px;
+	}
+	.opening-date {
+		width: 300px;
+		height: 35px;
+	}
+	.results {
+		width: 90%;
+	}
+	.results > article {
+		border: 8px solid #e7455f;
+		border-radius: 3px;
+		text-align: center;
+		margin: 30px 0;
+		padding: 10px;
+	}
+	article h2 {
+		color: #f7b236;
+	}
+	article a {
+		color: #d80e70;
+	}
+	footer {
+		margin: 40px 0;
+	}
+	footer a {
+		color: pink;
+	}
+</style>
+<body>
+	<h1>New York Times Movies Critics and Reviews Viewer</h1>
+	<div class="form">
+		<form>
+			<label>Enter title or keyword(s).</label>
+			<input type="text" name="keyword" class="search">
+			<label><em>(optional)</em> Opening date.<br> Enter one date or start and end dates.</label>
+			<input type="text" name="opening-date" class="opening-date" placeholder="YYYY-MM-DD or YYYY-MM-DD;YYYY-MM-DD">
+			<button type="submit" class="submit">Submit</button>
+		</form>
+	</div>
+	<section class="results"></section>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a> //
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+</footer>
+</body>
+</html>
