@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Twitch TV Viewer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+	<style>
+	/* palette colorhunt 82938 */
+		body {
+			margin: 0;
+			box-sizing: border-box;
+			background-color: #393e46;
+			color: #222831;
+			font-family: 'Oswald', sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		header, footer {
+			text-align: center;
+			margin: 50px 0;
+		}
+		header h1 {
+			font-size: 4em;
+		}
+		header p {
+			font-size: 1.3em;
+		}
+		section {
+			width: 75%;
+			border: 2px solid #f2f2f2;
+		}
+		.buttons {
+			display: flex;
+			justify-content: space-around;
+		}
+		.buttons div {
+			background-color: #f2f2f2;
+			padding: 15px;
+			border-radius: 5px;
+		}
+		.buttons div {
+
+		}
+		.results {
+			border: 10px solid #f96d00;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.results div {
+			background-color: rgba(255, 255, 255, 0.3);
+			width: 90%;
+			border-radius: 3px;
+			margin: 20px 0;
+		}
+		.result div:hover {
+			box-shadow: 0 0 15px white;
+			cursor: pointer;
+		}
+		footer a {
+			color: pink;
+		}
+	</style>
+<body>
+	<header>
+		<h1>My Twitch TV Viewer</h1>
+		<p>This is a FreeCodeCamp project. The purpose is to provide infos about my favorite Twitch TV channels and links to them. I used Twitch API and JavaScript to build it.</p>
+	</header>
+	<section>
+		<div class="buttons">
+			<div class="all">ALL</div>
+			<div class="online">ONLINE</div>
+		</div>
+		<div class="results">
+			<div id="ogtv">bla</div>
+			<div id="trinity"></div>
+			<div id="hsdog"></div>
+			<div id="marmotte"></div>
+			<div id="erin"></div>
+			<div id="moman"></div>
+			<div id="armatvhs"></div>
+			<div></div>
+			<div></div>
+		</div>
+	</section>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+</footer>
+</body>
+</html>
