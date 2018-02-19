@@ -6,64 +6,206 @@
 	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
 	<style>
 	/* palette colorhunt 82938 */
 		body {
 			margin: 0;
-			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
 			background-color: #393e46;
 			color: #222831;
 			font-family: 'Oswald', sans-serif;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 		}
 		*, *:before, *:after {
-			box-sizing: inherit;
+			-webkit-box-sizing: inherit;
+			        box-sizing: inherit;
 		}
-		header, footer {
+		/* header */
+		header {
 			text-align: center;
 			margin: 50px 0;
 		}
 		header h1 {
 			font-size: 4em;
+			text-shadow: 0 0 2px #f2f2f2;
 		}
 		header p {
 			font-size: 1.3em;
 		}
-		section {
-			width: 75%;
-			border: 2px solid #f2f2f2;
-		}
-		.buttons {
-			display: flex;
-			justify-content: space-around;
-		}
-		.buttons div {
-			background-color: #f2f2f2;
-			padding: 15px;
-			border-radius: 5px;
-		}
-		.buttons div {
-
-		}
-		.results {
-			border: 10px solid #f96d00;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.results div {
-			background-color: rgba(255, 255, 255, 0.3);
+		/* list. appear on click*/
+		.liste {
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			list-style-type: none;
 			width: 90%;
-			border-radius: 3px;
+			border: 2px solid #f2f2f2;
 			margin: 20px 0;
 		}
-		.result div:hover {
-			box-shadow: 0 0 15px white;
+		.liste li {
+			-webkit-box-flex: 1;
+			    -ms-flex: 1;
+			        flex: 1;
+			text-align: center;
+			padding: 5px;
+		}
+		.liste a {
+			color: #f2f2f2;
+			text-decoration: none;
+		}
+		.liste a:hover {
+			color: #f96d00;
+		}
+		/* section = 2d body */
+		section {
+			width: 90%;
+			border: 5px solid #f2f2f2;
+		}
+		/* buttons div */
+		.buttons {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-pack: distribute;
+			    justify-content: space-around;
+			height: 75px;
+			background-color: #f2f2f2;
+			margin-bottom: 20px;
+		}
+		.buttons div {
+			width: 100px;
+			padding: 15px;
+			border-right: 1px solid #222381;
+			border-left: 1px solid #222381;
+		}
+		.all, .onlineOnly, .byName {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+		}
+		.all:hover, .onlineOnly:hover, .byName:hover {
+			text-shadow: 0 0 1px #f96d00;
 			cursor: pointer;
+		}
+		/* big div with all channels div created with js */
+		.results {
+			border: 10px solid #f96d00;
+			margin: 40px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+		}
+		/* "chan" div */
+		.results > div {
+			width: 100%;
+			margin: 30px 0;
+			-webkit-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			transition: all 0.2s;
+		}
+		.results > div:hover {
+			-webkit-box-shadow: 0 0 15px white;
+			        box-shadow: 0 0 15px white;
+		}
+		/* online offline status */
+		.status {
+			text-transform: uppercase;
+			font-size: 1.2em;
+			padding-left: 2px;
+			border-bottom: 2px solid #222831;
+		}
+		/* channel div */
+		.channel {
+			background-color: rgba(255, 255, 255, 0.3);
+			width: 82%;
+			padding: 15px;
+			border-radius: 3px;
+			margin: auto;
+			margin-bottom: 20px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+		}
+		.about, .chaine {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+		}
+		.overview {
+			text-align: center;
+			padding: 10px;
+			-webkit-box-shadow: 0 0 5px #f96d00;
+			        box-shadow: 0 0 5px #f96d00;
+		}
+		.channel h3 {
+			font-size: 1.4em;
+			padding: 10px;
+			position: relative;
+		}
+		.channel h4 {
+			padding-top: 5px;
+			text-align: center;
+		}
+		.channel h3:before {
+			content:'';
+			width: 70%;
+			height: 60px;
+			position: absolute;
+			top: 0;
+			left: 15%;
+			border-top: 3px solid #f96d00;
+			border-bottom: 3px solid #f96d00;
+		}
+		.results a {
+			color: #f2f2f2;
+		}
+		.logo {
+			width: 120px;
+			height: 120px;
+		}
+		/*  footer */
+		footer {
+			text-align: center;
+			margin: 100px 0 50px 0;
 		}
 		footer a {
 			color: pink;
@@ -74,21 +216,23 @@
 		<h1>My Twitch TV Viewer</h1>
 		<p>This is a FreeCodeCamp project. The purpose is to provide infos about my favorite Twitch TV channels and links to them. I used Twitch API and JavaScript to build it.</p>
 	</header>
+	<div class="liste"></div>
 	<section>
 		<div class="buttons">
 			<div class="all">ALL</div>
-			<div class="online">ONLINE</div>
+			<div class="byName">BY NAME</div>
+			<div class="onlineOnly">ONLINE</div>
 		</div>
 		<div class="results">
-			<div id="ogtv">bla</div>
-			<div id="trinity"></div>
-			<div id="hsdog"></div>
-			<div id="marmotte"></div>
-			<div id="erin"></div>
-			<div id="moman"></div>
-			<div id="armatvhs"></div>
-			<div></div>
-			<div></div>
+			<!-- javascript will create
+			<div class="">
+				<p class="status"></p>
+				<div class="channel">
+					<div class="about">...</div>
+					<div class="chaine">...</div>
+				</div>
+			</div>
+			  -->
 		</div>
 	</section>
 	<footer>
