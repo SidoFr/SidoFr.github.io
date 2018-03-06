@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>highlight links</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+<style>
+	html {
+		margin: 0;
+		box-sizing: border-box;
+	}
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+	body {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #00b7c2;
+		font-family: 'Roboto', sans-serif;
+	}
+	nav {
+		width: 100%;
+		border-bottom: 15px solid #128494;
+		padding: 50px 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+	li {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.bla {
+		width: 70%;
+		margin: 50px 0;
+		text-align: justify;
+		padding: 50px 20px;
+		position: relative;
+	}
+	nav a {
+		text-decoration: none;
+		font-weight: bold;
+		padding: 10px;
+		border-radius: 20px;
+	}
+	.bla a {
+		text-decoration: none;
+		font-weight: bold;
+		padding: 3px;
+		border-radius: 20px;
+	}
+	.highlight {
+		background-color: #4ef037;
+		border-radius: 20px;
+		transition: all 0.3s;
+		/* pos de départ */
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	footer {
+		margin: 100px 0 50px 0;
+		text-align: center;
+	}
+	footer a {
+		color: pink;
+	}
+</style>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">LOREM</a></li>
+			<li><a href="#">IPSUM</a></li>
+			<li><a href="#">LOREM<br>IPSUM</a></li>
+			<li><a href="#">LOREM</a></li>
+			<li><a href="#">IPSSUMMM</a></li>
+		</ul>
+	</nav>
+	<div class="bla">
+	<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna ex, egestas a vestibulum quis, laoreet id nisi. Maecenas dignissim maximus pretium. <a href="#">Fusce faucibus mauris vel nunc dictum</a>, nec condimentum nulla vehicula. Nam vulputate libero est, a fermentum eros sagittis nec. Duis elementum lacus et odio iaculis, ac porttitor magna egestas. Donec nec dolor facilisis, consequat purus in, luctus sapien. Sed sed arcu id leo aliquet lacinia. Ut sodales ornare ipsum eget auctor. In vehicula quam vel odio suscipit varius. Fusce gravida nulla blandit elementum viverra. Duis ornare erat vel semper ultrices. Nunc sollicitudin mi erat, ac pretium neque tincidunt a.<br>
+	Etiam aliquam congue volutpat. Pellentesque nec commodo ipsum. Cras suscipit ornare ante. Aliquam erat volutpat. Etiam posuere convallis nisi, et ornare elit iaculis in. Mauris <a href="#">mollis</a> diam vitae est pellentesque, eu mollis nisi semper. Praesent in tempor mauris, et ultricies risus. Sed pulvinar porttitor varius. Vivamus ac leo nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sollicitudin quam vitae malesuada euismod.</p>
+	<p>Maecenas semper nec nisi non efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Integer aliquam</a> tellus in ante laoreet interdum. Morbi ut dapibus tellus. Nullam lacinia odio nec quam facilisis, et lobortis odio iaculis. Vivamus libero ante, laoreet pellentesque justo ut, porta pharetra mi. Sed tempus non ligula sit amet dictum. Sed molestie arcu gravida elit tempus placerat. Quisque consequat vestibulum efficitur.</p>
+	<p>Suspendisse auctor, odio in commodo condimentum, magna risus mollis urna, id fermentum turpis tellus vel enim. Ut ultrices risus ut nunc egestas ornare. Vivamus facilisis nibh vestibulum sapien lacinia tincidunt nec vitae risus. Quisque sit amet lobortis tellus. Praesent pulvinar finibus nisi, id gravida ligula accumsan nec. Suspendisse porta augue sit amet massa mollis efficitur. Nulla tellus sapien, fermentum vitae commodo in, <a href="#">dapibus</a> eget odio.<br>
+	Integer dui metus, ultricies ac eros non, vulputate semper ipsum. Fusce eu ligula urna. Phasellus efficitur nisi nibh, a venenatis velit sagittis in. Aliquam pellentesque auctor magna, dignissim finibus sem dapibus consectetur. Curabitur sed turpis sit amet ante semper pretium. Vestibulum egestas libero a risus sollicitudin aliquet eu in ex. Aliquam vel nunc aliquet, tristique est sed, finibus nulla. Aliquam in pellentesque orci, a tempor magna. <a href="#">Vestibulum</a> ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed efficitur vulputate eros eu cursus. Maecenas fermentum, lectus vel viverra finibus, enim orci gravida ligula, ac vestibulum felis ex et orci. Sed quis felis felis. Nunc maximus euismod velit sed vehicula.</p>
+	</div>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+	</footer>
+	<script>
+		window.onload = function init() {
+		//get elts i want to higlight
+		const amorces = document.querySelectorAll('a');
+		//create the highlighter
+		const highlight = document.createElement('span');
+		highlight.classList.add('highlight');
+		document.body.appendChild(highlight);
+		function highlightElt() {
+			//get size and coords of elt
+			const linksCoords = this.getBoundingClientRect();
+			console.log(linksCoords);
+			//apply these datas to highlight
+			//take scroll into account(window.scrollY) so create my obj coords
+			const coords = {
+				width: linksCoords.width,
+				height: linksCoords.height,
+				top: linksCoords.top + window.scrollY, 
+				//just in case of scroll width
+				left: linksCoords.left + window.scrollX
+			}
+			highlight.style.width = `${coords.width}px`;
+			highlight.style.height = `${coords.height}px`;
+			highlight.style.transform = `translate(${coords.left}px,${coords.top}px)`;
+		}
+		
+		amorces.forEach(amorce=> amorce.addEventListener('mouseenter', highlightElt));
+
+}		
+	</script>
+</body>
+</html>
