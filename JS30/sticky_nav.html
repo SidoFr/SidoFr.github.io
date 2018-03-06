@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>sticky nav</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #5FCC9C;
+			font-family: 'Oswald', sans-serif;
+		}
+		header {
+			width: 100%;
+			height: 200px;
+			text-align: center;
+			background-color: #aaffc7;
+			color: #215b63;
+			font-size: 3em;
+		}
+		nav {
+			width: 100%;
+			background-color: #215b63;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.1em;
+			transition: all 0.5s;
+			/* ne change rien au chargement mais permet au nav de rester fixé au top qd 'fixed-nav'. pourrait être mis ds .fixed-nav nav{}*/
+			position: relative; 
+			top: 0;
+			z-index: 1;	
+		}
+		.fixed-nav nav {
+			position: fixed;
+			border-bottom: 5px solid #aaffc7;
+			/*
+			top: 0;
+			z-index: 1;
+			*/
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;	
+			display: flex;
+		}
+		li {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+		}
+		.logo {
+			max-width: 0;
+			overflow: hidden;
+			color: white;
+			transition: all 0.5s;
+		}
+		.fixed-nav .logo{
+			max-width: 500px;
+		}
+		.bla {
+			width: 85%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #aaffc7;
+			text-align: justify;
+			margin: 75px 0;
+			padding: 50px 20px;
+		}
+		footer {
+			margin: 100px 0 50px 0;
+			text-align: center;
+		}
+		footer a {
+			color: pink;
+		}
+	</style>
+</head>
+<body>
+	<header>HEADER</header>
+	<nav>
+		<ul>
+			<li class="logo">LOGO</li>
+			<li>LOREM</li>
+			<li>IPSUM</li>
+			<li>LOREM</li>
+			<li>IPSUM</li>
+			<li>LOREM</li>
+			<li>IPSUM</li>
+		</ul>
+	</nav>
+	<div class="bla">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna ex, egestas a vestibulum quis, laoreet id nisi. Maecenas dignissim maximus pretium. Fusce faucibus mauris vel nunc dictum, nec condimentum nulla vehicula. Nam vulputate libero est, a fermentum eros sagittis nec. Duis elementum lacus et odio iaculis, ac porttitor magna egestas. Donec nec dolor facilisis, consequat purus in, luctus sapien. Sed sed arcu id leo aliquet lacinia. Ut sodales ornare ipsum eget auctor. In vehicula quam vel odio suscipit varius. Fusce gravida nulla blandit elementum viverra. Duis ornare erat vel semper ultrices. Nunc sollicitudin mi erat, ac pretium neque tincidunt a.</p>
+		<p>Etiam aliquam congue volutpat. Pellentesque nec commodo ipsum. Cras suscipit ornare ante. Aliquam erat volutpat. Etiam posuere convallis nisi, et ornare elit iaculis in. Mauris mollis diam vitae est pellentesque, eu mollis nisi semper. Praesent in tempor mauris, et ultricies risus. Sed pulvinar porttitor varius. Vivamus ac leo nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sollicitudin quam vitae malesuada euismod.</p>
+		<p>Maecenas semper nec nisi non efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam tellus in ante laoreet interdum. Morbi ut dapibus tellus. Nullam lacinia odio nec quam facilisis, et lobortis odio iaculis. Vivamus libero ante, laoreet pellentesque justo ut, porta pharetra mi. Sed tempus non ligula sit amet dictum. Sed molestie arcu gravida elit tempus placerat. Quisque consequat vestibulum efficitur.</p>
+		<p>Suspendisse auctor, odio in commodo condimentum, magna risus mollis urna, id fermentum turpis tellus vel enim. Ut ultrices risus ut nunc egestas ornare. Vivamus facilisis nibh vestibulum sapien lacinia tincidunt nec vitae risus. Quisque sit amet lobortis tellus. Praesent pulvinar finibus nisi, id gravida ligula accumsan nec. Suspendisse porta augue sit amet massa mollis efficitur. Nulla tellus sapien, fermentum vitae commodo in, dapibus eget odio.</p>
+		<p>Integer dui metus, ultricies ac eros non, vulputate semper ipsum. Fusce eu ligula urna. Phasellus efficitur nisi nibh, a venenatis velit sagittis in. Aliquam pellentesque auctor magna, dignissim finibus sem dapibus consectetur. Curabitur sed turpis sit amet ante semper pretium. Vestibulum egestas libero a risus sollicitudin aliquet eu in ex. Aliquam vel nunc aliquet, tristique est sed, finibus nulla. Aliquam in pellentesque orci, a tempor magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed efficitur vulputate eros eu cursus. Maecenas fermentum, lectus vel viverra finibus, enim orci gravida ligula, ac vestibulum felis ex et orci. Sed quis felis felis. Nunc maximus euismod velit sed vehicula.</p>
+		<p>Integer dui metus, ultricies ac eros non, vulputate semper ipsum. Fusce eu ligula urna. Phasellus efficitur nisi nibh, a venenatis velit sagittis in. Aliquam pellentesque auctor magna, dignissim finibus sem dapibus consectetur. Curabitur sed turpis sit amet ante semper pretium. Vestibulum egestas libero a risus sollicitudin aliquet eu in ex. Aliquam vel nunc aliquet, tristique est sed, finibus nulla. Aliquam in pellentesque orci, a tempor magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed efficitur vulputate eros eu cursus. Maecenas fermentum, lectus vel viverra finibus, enim orci gravida ligula, ac vestibulum felis ex et orci. Sed quis felis felis. Nunc maximus euismod velit sed vehicula.</p>
+	</div>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+</footer>
+<!-- want to stick the nav so that when user scroll, nav is stick to top -->
+<script>
+	const nav = document.querySelector('nav');
+	//get position of top of nav
+	const navTop = nav.offsetTop;
+	function stickIt() {
+		console.log(navTop, window.scrollY);
+		//get position of scroll top
+		if(window.scrollY >= navTop) {
+			//compensate loss of space previously taken by nav (since 'fixed' no more space taken)
+			document.body.style.paddingTop = nav.offsetHeight +'px';
+			//add class to make work easier since I can target any children
+			document.body.classList.add('fixed-nav');
+			
+		}else {
+			document.body.style.paddingTop = 0;
+			document.body.classList.remove('fixed-nav');
+		}
+	}
+	window.addEventListener('scroll', stickIt);
+</script>
+</body>
+</html>
