@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>click and drag to scroll</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<style>
+		html {
+			margin: 0;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			-webkit-box-sizing: inherit;
+			        box-sizing: inherit;
+		}
+		body {
+			margin: 0;
+			background-color: #d9faff;
+		}
+		header {
+			text-align: center;
+			color: #ff5f5f;
+			font-size: 4em;
+			text-transform: uppercase;
+			font-family: 'Roboto', sans-serif;
+		}
+		.sliderBox {
+			margin: auto;
+			width: 90%;
+			height: 600px;
+			background-color: rgba(0, 0, 0, 0.2);
+			padding: 75px;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			white-space: nowrap;
+			-webkit-user-select: none;
+			   -moz-user-select: none;
+			    -ms-user-select: none;
+			        user-select: none;
+			text-align: center;
+			color: #2c2c2c;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.1em;
+			-webkit-transform: scale(0.98);
+			    -ms-transform: scale(0.98);
+			        transform: scale(0.98);
+			-webkit-perspective: 400px;
+			        perspective: 400px;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;		
+		}
+		.sliderBox::-webkit-scrollbar {
+			width: 15px;
+			-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+			        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+		}
+		.sliderBox::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+			        box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+		}
+		.sliderBox p {
+			margin: 100px;
+		}
+		.item {
+			margin: auto;
+			width: 250px;
+			height: calc(50% + 100px);
+			border: 10px solid rgba(250,250,250, 0.5);
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex;
+			
+		}
+		.sliderBox.active {
+			-webkit-transform: scale(1);
+			    -ms-transform: scale(1);
+			        transform: scale(1);
+			cursor: grabbing;
+			cursor: -webkit-grabbing;
+		}
+		footer {
+			text-align: center;
+			font-family: 'Oswald', sans-serif;
+		}
+		footer a {
+			color: pink;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>welcome!</h1>
+	</header>
+	<div class="sliderBox">
+		<div class="item item1" style="background-color: #2c2c2c"></div>
+		<div class="item item2" style="background-color: #ff5f5f"></div>
+		<div class="item item3" style="background-color: #83ffe6"></div>
+		<div class="item item4" style="background-color: #fcfcfc"></div>
+		<div class="item item5" style="background-color: #fffcef"></div>
+		<div class="item item6" style="background-color: #d2ebcd"></div>
+		<div class="item item7" style="background-color: #ff7f5b"></div>
+		<div class="item item8" style="background-color: #393939"></div>
+		<div class="item item9" style="background-color: #aaaaaa"></div>
+		<div class="item item10" style="background-color: #bbbbbb"></div>
+		<div class="item item11" style="background-color: #ffebb7"></div>
+		<div class="item item11" style="background-color: #70d4b4"></div>
+		<p>Click and drag to go through items.</p>
+	</div>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+	</footer>
+	<script>
+		window.onload = function init() {
+			//we want to listen to mouse events on the slider box
+			const slider = document.querySelector('.sliderBox');
+			//flag for mouse click
+			let mouseDown = false;
+			//pos of the mouse
+			let startX;
+			//nb of pixels scrolled (left)
+			let scrollLeft;
+			//a fn for each of our 4 event listeners
+			slider.addEventListener('mousedown', (evt)=> {
+				mouseDown = true;
+				slider.classList.add('active');
+				//get startX value
+				//pageX == x coord of mouse on the page
+				startX = evt.pageX - slider.offsetLeft; //minus any margin
+				//initial pos of scroll
+				scrollLeft = slider.scrollLeft;
+			});
+			slider.addEventListener('mouseup', ()=> {
+				mouseDown = false;
+				slider.classList.remove('active');
+			});
+			slider.addEventListener('mouseleave', ()=> {
+				mouseDown =false;
+				slider.classList.remove('active');
+			});
+			slider.addEventListener('mousemove', (evt)=> {
+				//if not mouseDown, end fn
+				if(!mouseDown) return;
+				evt.preventDefault();
+				//calc pixels scrolled = where is the cursor when moved
+				const x = evt.pageX - slider.offsetLeft;
+				//calc how much px to slide
+				const slide = (x - startX) * 3; //*3px : add px to enhance mvt
+				//smooth mvt
+				slider.scrollLeft = scrollLeft - slide;
+			});
+		}
+	</script>
+</body>
+</html>
