@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>"Stripe Like" Dropdown Menu</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<div class="background">
+			<span class="arrow"></span>
+		</div>
+		<ul class="menu">
+			<li class="sub">
+				<a class="title" href="#">LOREM</a>
+				<ul class="dropdown dd1">
+					<li><a href="#">Aliquam erat volutpat</a></li>
+					<li><a href="#">Aliquam erat volutpat</a></li>
+					<li><a href="#">Aliquam erat volutpat</a></li>
+				</ul>
+			</li>
+			<li class="sub">
+				<a class="title" href="#">IPSUM</a>
+				<ul class="dropdown dd2">
+					<li>
+						<a href="#">Aenean</a>
+						<p>Cras tincidunt varius egestas</p>
+						<p>in imperdiet odio</p>
+					</li>
+					<li>
+						<a href="#">Lorem ipsum</a>
+						<p>Cras tincidunt varius egestas</p>
+					</li>	
+					<li>
+						<a href="#">Aenean</a>
+						<p>in imperdiet odio</p>
+					</li>
+					<li>
+						<a href="#">Lorem ipsum</a>
+						<p>Cras tincidunt varius egestas</p>
+					</li>	
+				</ul>
+			</li>
+			<li class="sub">
+				<a class="title" href="#">IPSUM</a>
+				<div class="dropdown dd3">
+					<div>
+						<div class="img"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt varius egestas.</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a class="title" href="#">LOREM</a>
+				<ul class="dropdown dd4">
+					<li class ="button"><a href="twitter">Twitter</a></li>
+					<li class ="button"><a href="instagram">Instagram</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="hello">
+		<p>This is a simplified version of the Stripe website's menu.</p>
+	</div>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+	</footer>
+	<script>
+		window.onload = function init() {
+			const triggers = document.querySelectorAll('.menu>li');
+			const dropBg = document.querySelector('.background');
+			const nav = document.querySelector('nav');
+			function handleEnter() {
+				this.classList.add('trigger-enter');
+				//use arrow to inherit this value
+				setTimeout(()=> {
+					//bool to avoid bugs when mouse mvt too quick
+					if(this.classList.contains('trigger-enter')) {
+						this.classList.add('trigger-enter-active');
+					}
+				}, 150); // shorter way to write: setTimeout(()=>this.classlist.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
+				dropBg.classList.add('open');
+				//get size and coords to adjust bg
+				const dropdown = this.querySelector('.dropdown');
+				const dropCoords = dropdown.getBoundingClientRect();
+				const navCoords = nav.getBoundingClientRect();
+				//console.log(dropCoords, navCoords);
+				const coords = {
+					width: dropCoords.width,
+					height: dropCoords.height,
+					top: dropCoords.top - navCoords.top,
+					left: dropCoords.left - navCoords.left
+				}
+				dropBg.style.setProperty('width', `${coords.width}px`);
+				dropBg.style.setProperty('height', `${coords.height}px`);
+				dropBg.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`);
+			}
+			function handleLeave() {
+				this.classList.remove('trigger-enter', 'trigger-enter-active');
+				dropBg.classList.remove('open');
+			}
+			triggers.forEach(trigger=> trigger.addEventListener('mouseenter', handleEnter));
+			triggers.forEach(trigger=> trigger.addEventListener('mouseleave', handleLeave));
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+
+html {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
+}
+body {
+	margin: 0;
+	background-color: #ffa3ac;
+	color: #00043c;
+	font-family: 'Oswald', sans-serif;
+	min-height: 100vh;
+}
+
+/*  éléments px */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+a {
+	text-decoration: none;
+}
+nav {
+	background-color: #005d6c;
+	position: relative;
+}
+.menu {
+	margin: 0;
+	padding: 20px 0;
+}
+.title {
+	color: #00043c;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	padding: 20px;
+	-webkit-box-shadow: 0 0 10px #00043c;
+	        box-shadow: 0 0 10px #00043c;
+	background-color: rgba(250,250,250,0.2);
+	-webkit-transform: scale(0.98);
+	    -ms-transform: scale(0.98);
+	        transform: scale(0.98);
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.title:hover {
+	-webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+}
+.menu > li {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.dropdown {
+	padding: 20px;
+	position: absolute;
+	top: 84px;
+	opacity: 0;
+	display: none;
+	overflow: hidden;
+	-webkit-transform: translate(px);
+	    -ms-transform: translate(px);
+	        transform: translate(px);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.dropdown a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #00043c;
+}
+.dd1 {
+	min-width: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.dd2 {
+	min-width: 300px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.dd2 p {
+	margin: 0.5em 0;
+}
+.dd3 {
+	min-width: 350px;
+}
+.dd4 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+/* sub-menus bg */
+.background {
+	background-color: #F6F6E9;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	-webkit-box-shadow: 0 0 20px #00043c;
+	        box-shadow: 0 0 20px #00043c;
+	-webkit-transition: all 0.3s, opacity 0.1s, -webkit-transform 0.2s;
+	transition: all 0.3s, opacity 0.1s, -webkit-transform 0.2s;
+	-o-transition: all 0.3s, opacity 0.1s, transform 0.2s;
+	transition: all 0.3s, opacity 0.1s, transform 0.2s;
+	transition: all 0.3s, opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	opacity: 0;
+}
+.arrow {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-color: #f6f6f9;
+	-webkit-transform: translateY(-40%) rotate(45deg);
+	    -ms-transform: translateY(-40%) rotate(45deg);
+	        transform: translateY(-40%) rotate(45deg);
+}
+/* added classes with js */
+.trigger-enter .dropdown {
+	display: block;
+}
+.trigger-enter-active .dropdown {
+	opacity: 1;
+}
+.background.open {
+	opacity: 1;
+}
+/* détails */
+.button:nth-child(1){
+	background-color: #00aced;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+.button:nth-child(2){
+	background-color: #bc2a8d;
+	padding: 10px 15px;
+}
+.img {
+	width: 50px;
+	height: 50px;
+	background-color: #00c9b1;
+}
+.hello {
+	margin-top: 400px;
+	text-align: center;
+	font-size: 1.1em;
+}
+footer {
+	margin: 100px 0 50px 0;
+	text-align: center;
+}
+footer a {
+	color: pink;
+}
