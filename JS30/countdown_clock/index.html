@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Countdown Clock</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+	<style>
+
+html {
+			margin: 0;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			-webkit-box-sizing: inherit;
+			        box-sizing: inherit;
+		}
+		body {
+			margin: 0;
+			background-color: #ff467e; 
+			color: #f6c7c7;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+		.choix {
+			width: 100%;
+			height: 75px;
+			-webkit-box-flex: 1;
+			    -ms-flex: 1;
+			        flex: 1;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+		}
+		.btn {
+			outline: none;
+			border-style: solid;
+			border-color: #f6c7c7;
+			font-family: 'Oswald', sans-serif;
+			font-weight: bold;
+			background-color: #f12b6b;
+			color: #f6c7c7;
+			text-transform: uppercase;
+			-webkit-transition:all 0.1s;
+			-o-transition:all 0.1s;
+			transition:all 0.1s;
+		}
+		.btn, .form {
+			-ms-flex-preferred-size: calc(100% / 6);
+			    flex-basis: calc(100% / 6);
+			height: 100%;
+			cursor: pointer;
+		}
+		.btn:hover {
+			background-color: #fd94b4;
+			color: #f12b6b;
+			border-color: #f12b6b;
+			-webkit-box-shadow: 0 0 10px #f6c7c7;
+			        box-shadow: 0 0 10px #f6c7c7;
+		}
+		.minutes {
+			width: 100%;
+			height: 100%;
+			background-color: #f6c7c7;
+			color: #ff467e;
+			font-weight: bold;
+			text-align: center;
+			border-style: ridge;
+			border-color: #ff467e;
+		}
+		.minutes::-webkit-input-placeholder {
+			color:#ff467e;
+			font-family: 'Oswald', sans-serif;
+		}
+		.minutes:hover {
+			-webkit-box-shadow: 0 0 10px #f6c7c7,
+				inset 0 0 20px #f12b6b;
+			        box-shadow: 0 0 10px #f6c7c7,
+				inset 0 0 20px #f12b6b;
+		}
+		.result {
+			-webkit-box-flex: 1;
+			    -ms-flex: 1;
+			        flex: 1;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			font-family: 'Roboto', sans-serif;
+		}
+		.time_left {
+			font-size: 7em;
+			margin: 120px 0 50px 0;
+		}
+		.words {
+			font-size: 5em;
+			margin: 0 0 100px 0;
+		}
+		footer {
+			text-align: center;
+			margin-top: 100px;
+		}
+		footer a {
+			color: pink;
+		}
+		@media all and (max-width: 500px) {
+			.time_left {
+				font-size: 5em;
+			}
+			.words {
+				font-size: 3em;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="choix">
+		<button data-time="9000" class="btn work">Session 2h30</button>
+		<button data-time="3600" class="btn work">Session 1h</button>
+		<button data-time="7200" class="btn pause">Pause 2h</button>
+		<button data-time="3600" class="btn pause">Pause 1h</button>
+		<button data-time="1800" class="btn pause">30mn pour manger</button>
+		<form name="form" class="form">
+			<input type="text" class="minutes" name="minutes" placeholder="entrer minutes">
+		</form>
+	</div>
+	<div class="result">
+		<h1 class="time_left"></h1>
+		<p class="words"></p>
+	</div>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by SidoFr <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+</footer>
+</body>
+</html>
