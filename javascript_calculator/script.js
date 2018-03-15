@@ -6,7 +6,7 @@ window.onload = function init() {
 	const clear = document.querySelector('#clear');
 	const equal = document.querySelector('#total');
 	//variables
-	const maxLength = 12;
+	const maxLength = 17;
 	let memory = '0';
 	let current = '0';
 	let operator = '';
