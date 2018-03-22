@@ -59,9 +59,7 @@ function startGame() {
 		if(evt.target.innerHTML === '') {
 			handleTurn(evt.target, evt.target.id, player);
 			if(!endOfGame) {
-				setTimeout(()=> {
-					computerMove(0, 8);
-				}, 1300);
+				computerMove(0, 8);
 			}
 		}
 	}		
@@ -98,7 +96,6 @@ function handleTurn(cell, cellId, player) {
 	}
 }
 function checkWin(board, player) {
-	let count = 0;
 	let win = null;
 	//go through board & check all moves
 	let moves = board.reduce((acc, current, index)=>
@@ -128,3 +125,6 @@ function itsADraw(board) {
 			results.innerHTML = 'And it is a draw!';
 		}
 	}
+/* notes
+the elegant use of reduce() in the checkWin fn comes from the youtube FCC tutorial by Beau Carnes
+*/
