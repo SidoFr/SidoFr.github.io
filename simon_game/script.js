@@ -170,8 +170,8 @@ function init() {
 		if(color === 'rouge') {
 			red.style.borderTopColor = 'red';
 			red.style.borderRightColor = 'red';
-			one.load(); //if not, sound only played once
-			one.play();
+			two.load(); //if not, sound only played once
+			two.play();
 			setTimeout(()=> {
 				red.style.borderTopColor = 'rgb(200, 0, 0)'; 
 				red.style.borderRightColor = 'rgb(200, 0, 0)';
@@ -180,8 +180,8 @@ function init() {
 		if(color === 'jaune') {
 			yellow.style.borderBottomColor = 'rgb(230, 255, 20)';
 			yellow.style.borderRightColor = 'rgb(230, 255,20)';
-			one.load(); //if not, sound only played once
-			one.play();
+			three.load(); //if not, sound only played once
+			three.play();
 			setTimeout(()=> {
 				yellow.style.borderBottomColor = 'rgb(250, 250, 80)'; 
 				yellow.style.borderRightColor = 'rgb(250, 250, 80)';
@@ -190,8 +190,8 @@ function init() {
 		if(color === 'bleu') {
 			blue.style.borderBottomColor = 'blue';
 			blue.style.borderLeftColor = 'blue';
-			one.load(); //if not, sound only played once
-			one.play();
+			four.load(); //if not, sound only played once
+			four.play();
 			setTimeout(()=> {
 				blue.style.borderBottomColor = 'rgb(0,0, 180)'; 
 				blue.style.borderLeftColor = 'rgb(0,0, 180)';
