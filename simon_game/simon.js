@@ -181,8 +181,8 @@ function init() {
 			three.load(); //if not, sound only played once
 			three.play();
 			setTimeout(()=> {
-				yellow.style.borderBottomColor = 'rgb(250, 250, 80)'; 
-				yellow.style.borderRightColor = 'rgb(250, 250, 80)';
+				yellow.style.borderBottomColor = 'rgb(250, 250, 100)'; 
+				yellow.style.borderRightColor = 'rgb(250, 250, 100)';
 			}, 500);	
 		}
 		if(color === 'bleu') {
