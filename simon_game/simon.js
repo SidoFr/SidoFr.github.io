@@ -257,16 +257,3 @@ function init() {
 	buttons.forEach(btn=> btn.addEventListener('mousedown', (evt)=> evt.target.classList.toggle('onclick')));
 	buttons.forEach(btn=> btn.addEventListener('mouseup', (evt)=> evt.target.classList.toggle('onclick')));
 }
-
-//*********************************************************************************************************
-//personnal aside
-/* 
-			let i =0; 
-			toPlay.forEach((color, i)=> {
-				AiPlay = setTimeout(()=> {
-					changeColor(color);
-					played.push(color);
-				}, i* 700); //i have to increment delay because of the for loop
-			i++;
-			});
-*/
