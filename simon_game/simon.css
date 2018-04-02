@@ -1,0 +1,137 @@
+body {
+	margin: 0;
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*  LOOK */
+.container {
+	margin: 20px auto;
+	width:535px;
+	height:535px;
+	background-color: black;
+	border-radius: 360px;
+	box-shadow: 0 0 40px grey,
+	inset 0 0 14px #afa3a3;
+	position: relative;
+}
+#vert {
+	border-top:250px solid green;
+	border-left:250px solid green;
+	border-radius: 100% 0 0 0;
+	width: 0;
+	position: absolute;
+	top: 14px;
+	left: 14px;
+}
+#rouge {
+	border-top:250px solid rgb(200, 0, 0);
+	border-right:250px solid rgb(200, 0, 0);
+	border-radius: 0 100% 0 0;
+	width: 0;
+	position: absolute;
+	top: 14px;
+	left: 271px;
+}
+#jaune {
+	border-bottom:250px solid rgb(250, 250, 80);
+	border-right:250px solid rgb(250, 250, 80);
+	border-radius: 0 0 100% 0;
+	width: 0;
+	position: absolute;
+	bottom: 14px;
+	left: 271px;
+}
+#bleu {
+	border-bottom:250px solid rgb(0, 0, 180);
+	border-left:250px solid rgb(0, 0, 180);
+	border-radius: 0 0 0 100%;
+	width: 0;
+	position: absolute;
+	bottom: 14px;
+	left: 14px;
+}
+/* centre */
+.center {
+	width: 200px;
+	height: 200px;
+	border-radius: 360px;
+	border: 5px solid black;
+	box-shadow: 0 0 2px black,
+			inset 0 0 5px black;
+	position: absolute;
+	top: 162.5px;
+	left: 162.5px;
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.wrap {
+	margin-bottom: 5px;
+	width: 150px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#count {
+	width: 75px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 10px black;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	padding-top: 11px;
+	text-align: center;
+	font-size: 1.3em;
+	color: ;
+	font-family: 'Mina', sans-serif;
+}
+.btn {
+	outline: none;
+	border-style: none;
+	border-radius: 5px;
+	width: 60px;
+	height: 30px;
+	font-size: 11px;
+	box-shadow: 0 0 7px black,
+	inset 0 0 2px black;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+#strict {
+	border-radius: 360px;
+	width: 50px;
+	height: 50px;
+}
+.btn.onclick {
+	transform: scale(0.95);
+	box-shadow: 0 0 8px black,
+			inset 0 0 5px black;
+}
+#success {
+	width: 380px;
+	height: 110px;
+	display: none;
+	position: absolute;
+	top: 72px;
+	left: 61px;
+	border-radius: 5px;
+	background-color: #4ef037;
+	padding: 10px;
+	color: #128494;
+	text-align: center;
+}
+#success span {
+	color: white;
+}
+footer {
+	margin-top: 100px;
+	text-align: center;
+	color: grey;
+}
+footer a {
+	color: pink;
+}
