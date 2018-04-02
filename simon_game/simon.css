@@ -51,6 +51,13 @@ body {
 	bottom: 14px;
 	left: 14px;
 }
+.triangle.cliquable {
+	cursor: pointer;
+	pointer-events: auto;
+}
+.triangle.neutre {
+	pointer-events: none;
+}
 /* centre */
 .center {
 	width: 200px;
