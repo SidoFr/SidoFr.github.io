@@ -111,7 +111,9 @@ header h3 {
 	text-decoration: none;
 	color: black;
 }
-
+#certifOne {
+	width: 100%;
+}
 /* CONTACTS */
 .contacts {
 	width: 300px;
