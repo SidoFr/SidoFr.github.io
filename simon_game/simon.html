@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>A Simon Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link rel="stylesheet" type="text/css" href="simon.css">
+	<link href="https://fonts.googleapis.com/css?family=Mina|Roboto" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script type="text/javascript" src="simon.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="triangle neutre" id="vert"></div>
+		<div class="triangle neutre" id="rouge"></div>
+		<div class="triangle neutre" id="bleu"></div>
+		<div class="triangle neutre" id="jaune"></div>
+		<audio src="sounds/simonSound1.mp3" id="one"></audio>
+		<audio src="sounds/simonSound2.mp3" id="two"></audio>
+		<audio src="sounds/simonSound3.mp3" id="three"></audio>
+		<audio src="sounds/simonSound4.mp3" id="four"></audio>
+		<div class="center">
+			<div id="count">00</div>
+			<div class="wrap">
+				<button class="btn" id="start">START</button>
+				<button class="btn" id="strict">STRICT</button>
+				<audio src="sounds/denied-buzz.mp3" id="err"></audio>
+			</div>
+			<button class="btn" id="on">ON</button>
+		</div>
+		<div id="success">
+			<p><span>Bravo!</span> You won!<br>
+			Why don't you try strict mode for more challenge?!</p>
+		</div>
+		<div id="strictSuccess">
+			<p><span>Bravo!</span><br>
+			You roxxe like a unicorn poney!</p>
+		</div>
+	</div>
+	<footer>
+		<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank"> by Nepenthes <i class="fab fa-github"></i></a><br>
+		<a href="https://twitter.com/SidoMee" target="blank"><i class="fab fa-twitter"></i></a>
+</footer>
+</body>
+</html>
