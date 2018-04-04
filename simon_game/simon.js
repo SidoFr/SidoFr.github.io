@@ -180,10 +180,10 @@ function init() {
 		count < 10 ? screen.innerHTML = '0' + count : screen.innerHTML = count;
 	}
 	function success() {
-		if(count === 3 && normalMode) {
+		if(count === 20 && normalMode) {
 			endPop.style.display = 'flex';
 			win = true;
-		}else if(count === 3 && strict) {
+		}else if(count === 20 && strict) {
 			strictPop.style.display = 'flex';
 			win = true;
 		}else {
