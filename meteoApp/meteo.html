@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>App météo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+	<link rel="stylesheet" type="text/css" href="meteo.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:500" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+</head>
+<body>
+	<header>
+		<h2>Mon application météo</h2>
+	</header>
+	<div class="box main" id="main">
+		<p>Entrer ville (,et pays)</p>
+		<form>
+				<input type="text" name="choix" placeholder="ex: Marseille, fr" autocomplete="off">
+				<input type="submit" name="submit">
+		</form>
+		<div>
+			<div class="img"></div>
+			<p class="datas" id="cond"></p>
+		</div>
+		<p class="datas" id="mainTemp"></p>
+		<p class="datas" id="time"></p>		
+	</div>
+	<div class="container" id="frame">
+		<div class="frames" id="frame1">
+			<ul class="liste">
+				<li class="date"></li>
+				<li class="6h"><span>6h</span></li>
+				<li class="9h"><span>9h</span></li>
+				<li class="12h"><span>12h</span></li>
+				<li class="18h"><span>18h</span></li>
+				<li class="21h"><span>21h</span></li>
+			</ul>
+		</div>
+		<div class="frames" id="frame2">
+			<ul class="liste">
+				<li class="date"></li>
+				<li class="6h"><span>6h</span></li>
+				<li class="9h"><span>9h</span></li>
+				<li class="12h"><span>12h</span></li>
+				<li class="18h"><span>18h</span></li>
+				<li class="21h"><span>21h</span></li>
+			</ul>
+		</div>
+		<div class="frames" id="frame3">
+			<ul class="liste">
+				<li class="date"></li>
+				<li class="6h"><span>6h</span></li>
+				<li class="9h"><span>9h</span></li>
+				<li class="12h"><span>12h</span></li>
+				<li class="18h"><span>18h</span></li>
+				<li class="21h"><span>21h</span></li>
+			</ul>
+		</div>
+		<div class="frames" id="frame4">
+			<ul class="liste">
+				<li class="date"></li>
+				<li class="6h"><span>6h</span></li>
+				<li class="9h"><span>9h</span></li>
+				<li class="12h"><span>12h</span></li>
+				<li class="18h"><span>18h</span></li>
+				<li class="21h"><span>21h</span></li>
+			</ul>
+		</div>
+		<div class="frames" id="frame5">
+			<ul class="liste">
+				<li class="date"></li>
+				<li class="6h"><span>6h</span></li>
+				<li class="9h"><span>9h</span></li>
+				<li class="12h"><span>12h</span></li>
+				<li class="18h"><span>18h</span></li>
+				<li class="21h"><span>21h</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="box" id="errorHandler">
+		<button class="close">✖</button>
+		<p>Nous sommes désolés,<br> les données n'ont pas pu être récupérées pour les raisons possibles suivantes:</p>
+		<ul>
+			<li>orthographe</li>
+			<li>réseau</li>
+			<li>ville indisponible dans la base de données (essayez une ville proche)</li>
+		</ul>
+		</div>
+<footer>
+	<i class="fa fa-copyright" aria-hidden="true"></i> Made with love<a href="https://github.com/SidoFr" target="blank" class="pink"> by Nepenthes <i class="fab fa-github"></i></a><br>
+	<a href="https://twitter.com/SidoMee" target="blank" class="pink"><i class="fab fa-twitter"></i></a>
+	<br>API: <a href="https://openweathermap.org" target="blank">OpenWeatherMap</a>
+</footer>
+<script type="text/javascript" src="script.js"></script> 
+<script type="text/javascript" src="effects.js"></script>
+</body>
+</html>
