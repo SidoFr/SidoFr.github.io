@@ -86,115 +86,105 @@ function displayIcon(stamp, code) {
   } else if ((month === 8 || month === 9) && (hour >= 20 || hour < 8)) {
     nigthmode = true;
   }
-  if (nigthmode) {
-    switch (code) {
-      case '800':
-        icon = 'url(icons/clearN.png)';
-        break;
-      case '801':
-        icon = 'url(icons/cloudsN.png)';
-        break;
-      case '802':
-        icon = 'url(icons/cloudsN.png)';
-        break;
-      case '803':
-      case '804':
-        icon = 'url(icons/cloudsN.png)';
-        break;
-      case '500':
-      case '501':
-      case '502':
-      case '503':
-      case '504':
-        icon = 'url(icons/rainN.png)';
-        break;
-      case '701':
-      case '711':
-      case '721':
-        icon = 'url(icons/mist.png)';
-        break;
-      case '520':
-      case '521':
-      case '522':
-      case '531':
-        icon = 'url(icons/showerRain_or_drizzle.png)';
-        break;
-      case code.startsWith('6'):
-      case '511':
-        icon = 'url(icons/snow.png)';
-        break;
-      case code.startsWith('2'):
-        icon = 'url(icons/thunder.png)';
-        break;
-      case code.startsWith('3'):
-        icon = 'url(icons/showerRain_or_drizzle.png)';
-        break;
-      case '900':
-      case '901':
-      case '902':
-      case '903':
-      case '904':
-      case '905':
-      case '906':
-        icon = '<i class="fas fa-exclamation-triangle"></i>';
-        break;
-      default:
-        icon = 'linear-gradient(to right, #56ccf2, #2f80ed)';
+   if (nightmode) {
+    if (code.startsWith('2')) {
+      icon = 'url(icons/thunder.png)';
+    } else if (code.startsWith('3')) {
+      icon = 'url(icons/showerRain_or_drizzle.png)';
+    } else if (code.startsWith('6')) {
+      icon = 'url(icons/snow.png)';
+    } else if (code.startsWith('90')) {
+      icon = '<i class="fas fa-exclamation-triangle"></i>';
+    } else {
+      switch (code) {
+        case '800':
+          icon = 'url(icons/clearN.png)';
+          break;
+        case '801':
+          icon = 'url(icons/cloudsN.png)';
+          break;
+        case '802':
+          icon = 'url(icons/cloudsN.png)';
+          break;
+        case '803':
+        case '804':
+          icon = 'url(icons/cloudsN.png)';
+          break;
+        case '500':
+        case '501':
+        case '502':
+        case '503':
+        case '504':
+          icon = 'url(icons/rainN.png)';
+          break;
+        case '701':
+        case '711':
+        case '721':
+        case '741':
+          icon = 'url(icons/mist.png)';
+          break;
+        case '520':
+        case '521':
+        case '522':
+        case '531':
+          icon = 'url(icons/showerRain_or_drizzle.png)';
+          break;
+        case '511':
+          icon = 'url(icons/snow.png)';
+          break;
+        default:
+          icon = 'linear-gradient(to right, #56ccf2, #2f80ed)';
+      }
     }
-  } else {
-    switch (code) {
-      case '800':
-        icon = 'url(icons/clear.png)';
-        break;
-      case '801':
-        icon = 'url(icons/few_clouds.png)';
-        break;
-      case '802':
-        icon = 'url(icons/clouds.png)';
-        break;
-      case '803':
-      case '804':
-        icon = 'url(icons/broken_clouds.png)';
-        break;
-      case '701':
-      case '711':
-      case '721':
-        icon = 'url(icons/mist.png)';
-        break;
-      case '500':
-      case '501':
-      case '502':
-      case '503':
-      case '504':
-        icon = 'url(icons/rain.png)';
-        break;
-      case '520':
-      case '521':
-      case '522':
-      case '531':
-        icon = 'url(icons/showerRain_or_drizzle.png)';
-        break;
-      case code.startsWith('6'):
-      case '511':
-        icon = 'url(icons/snow.png)';
-        break;
-      case code.startsWith('2'):
-        icon = 'url(icons/thunder.png)';
-        break;
-      case code.startsWith('3'):
-        icon = 'url(icons/showerRain_or_drizzle.png)';
-        break;
-      case '900':
-      case '901':
-      case '902':
-      case '903':
-      case '904':
-      case '905':
-      case '906':
-        icon = '<i class="fas fa-exclamation-triangle"></i>';
-        break;
-      default:
-        icon = 'linear-gradient(to right, #56ccf2, #2f80ed)';
+  } else if (!nightmode) {
+    if (code.startsWith('2')) {
+      icon = 'url(icons/thunder.png)';
+    } else if (code.startsWith('3')) {
+      icon = 'url(icons/showerRain_or_drizzle.png)';
+    } else if (code.startsWith('6')) {
+      icon = 'url(icons/snow.png)';
+    } else if (code.startsWith('90')) {
+      icon = '<i class="fas fa-exclamation-triangle"></i>';
+    } else {
+      switch (code) {
+        case '800':
+          icon = 'url(icons/clear.png)';
+          break;
+        case '801':
+          icon = 'url(icons/few_clouds.png)';
+          break;
+        case '802':
+          icon = 'url(icons/clouds.png)';
+          break;
+        case '803':
+        case '804':
+          icon = 'url(icons/broken_clouds.png)';
+          break;
+        case '701':
+        case '711':
+        case '721':
+        case '741':
+          icon = 'url(icons/mist.png)';
+          break;
+        case '500':
+        case '501':
+        case '502':
+        case '503':
+        case '504':
+          icon = 'url(icons/rain.png)';
+          break;
+        case '520':
+        case '521':
+        case '522':
+        case '531':
+          icon = 'url(icons/showerRain_or_drizzle.png)';
+          break;
+        case '511':
+          icon = 'url(icons/snow.png)';
+          break;
+        default:
+          icon = 'linear-gradient(to right, #56ccf2, #2f80ed)';
+      }
     }
   }
   return icon;
