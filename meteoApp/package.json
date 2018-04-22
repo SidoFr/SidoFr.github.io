@@ -1,0 +1,22 @@
+{
+  "name": "meteoapp",
+  "version": "1.0.0",
+  "description": "meteoapp",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel script.js --watch --out-file script.compiled.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
+  ]
+}
