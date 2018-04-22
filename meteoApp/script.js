@@ -229,7 +229,7 @@ function currentWeather(url) {
 }
 // display prévisions météo
 function getForecast(url) {
-  $.getJSON(url, (data) => { console.log(data)
+  $.getJSON(url, (data) => {
     const datas = data.list;
     firstLi1.innerText += today;
     firstLi2.innerText += day2;
