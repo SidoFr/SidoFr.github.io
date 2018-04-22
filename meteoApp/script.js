@@ -96,6 +96,8 @@ function displayIcon(stamp, code) {
       icon = 'url(icons/snow.png)';
     } else if (code.startsWith('90')) {
       icon = '<i class="fas fa-exclamation-triangle"></i>';
+    } else if (code === '731' || (code >= '751' && code <= '781')) {
+      icon = '<i class="fas fa-exclamation"></i>';
     } else {
       switch (code) {
         case '800':
@@ -146,6 +148,8 @@ function displayIcon(stamp, code) {
       icon = 'url(icons/snow.png)';
     } else if (code.startsWith('90')) {
       icon = '<i class="fas fa-exclamation-triangle"></i>';
+    } else if (code === '731' || (code >= '751' && code <= '781')) {
+      icon = '<i class="fas fa-exclamation"></i>';
     } else {
       switch (code) {
         case '800':
