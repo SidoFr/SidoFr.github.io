@@ -9,6 +9,7 @@ const currentTime = text.querySelector('span:first-of-type');
 const choice = text.querySelector('span:nth-of-type(2');
 const thenTime = text.querySelector('span:nth-of-type(3');
 const container = document.querySelector('.container');
+const audio = document.querySelector('#sound');
 // variables
 let countdown;
 let wantBreak = false;
@@ -59,6 +60,7 @@ function timer(time) {
     const secondsLeft = Math.round((then - Date.now()) / 1000); // in sec
     if (secondsLeft <= 0) {
       clearInterval(countdown);
+      audio.play();
     }
     displayCD(secondsLeft);
   }, 1000);
