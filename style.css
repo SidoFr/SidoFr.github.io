@@ -21,7 +21,7 @@ header {
 	max-width: 1000px;
 	height: 220px;
 	position: relative;
-	left: 32px;
+	left: 141px;
 	top: 65px;       
 }
 header h1 {
@@ -35,7 +35,7 @@ header h3 {
 
 /* INTRO */
 .intro {
-	margin: 59px 0;
+	margin: 65px 0 59px 232px;
 }
 .menu {
 	border: 5px solid black;
