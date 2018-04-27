@@ -15,17 +15,28 @@
 		<h2>Mon application météo</h2>
 	</header>
 	<div class="box main" id="main">
-		<p>Entrer ville (,et pays)</p>
-		<form>
+		<div>
+			<p class="accueil">accepter la </p><button class = "btn" id="geo">géolocalisation</button>
+		</div>
+		<div><p class="accueil">ou entrer ville (,et pays)</p>
+			<form id="byCity">
 				<input type="text" name="choix" placeholder="ex: Marseille, fr" autocomplete="off">
 				<input type="submit" name="submit" value="valider">
-		</form>
-		<div>
-			<div class="img"></div>
-			<p class="datas" id="cond"></p>
+			</form>
+			<p class="accueil">ou coordonnées</p>
+			<form id="byCoords">
+				<input type="text" name="choix" placeholder="latitude longitude" autocomplete="off">
+				<input type="submit" name="submit" value="valider">
+			</form>
 		</div>
+	</div>
+	<div class="box inside" id="results">
+		<h2 id="ville"></h2>
+		<div class="img"></div>
+		<p class="datas" id="cond"></p>
 		<p class="datas" id="mainTemp"></p>
-		<p class="datas" id="time"></p>		
+		<p class="datas" id="time"></p>
+		<button class="btn" id="refresh">nouvelle recherche</button>
 	</div>
 	<div class="container" id="frame">
 		<div class="frames" id="frame1">
@@ -83,7 +94,7 @@
 		<button class="close">✖</button>
 		<p>Nous sommes désolés,<br> les données n'ont pas pu être récupérées pour les raisons possibles suivantes:</p>
 		<ul>
-			<li>orthographe</li>
+			<li>orthographe / syntaxe</li>
 			<li>réseau</li>
 			<li>ville indisponible dans la base de données (essayez une ville proche)</li>
 		</ul>
