@@ -1,11 +1,15 @@
 // **********meteo api*************/
 // variables dom
 const main = document.querySelector('#main');
-const form = main.querySelector('form');
-const conditions = main.querySelector('#cond');
-const localTime = main.querySelector('#time');
-const mainTemp = main.querySelector('#mainTemp');
-const iconFrame = main.querySelector('.img');
+const form = main.querySelectorAll('form');
+const geo = main.querySelector('#geo');
+const results = document.querySelector('#results');
+const ville = results.querySelector('#ville');
+const conditions = results.querySelector('#cond');
+const localTime = results.querySelector('#time');
+const mainTemp = results.querySelector('#mainTemp');
+const iconFrame = results.querySelector('.img');
+const refresh = results.querySelector('#refresh');
 const container = document.querySelector('.container');
 const frames = container.querySelectorAll('.frames');
 const frame1 = container.querySelector('#frame1');
@@ -20,6 +24,7 @@ const firstLi4 = frame4.querySelector('li:first-child');
 const firstLi5 = frame5.querySelector('li:first-child');
 const errorFrame = document.querySelector('#errorHandler');
 const close = errorFrame.querySelector('button');
+const inputs = document.querySelectorAll('input[type=text]');
 // variables api
 const urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?';
 const urlWeather = 'https://api.openweathermap.org/data/2.5/weather?'; // id=city
@@ -196,15 +201,19 @@ function displayIcon(stamp, code) {
 }
 // *************display results***************
 function empty() {
+  results.style.display = 'none';
+  // empty results
+  ville.innerText = '';
+  iconFrame.style.backgroundImage = '';
   conditions.innerText = '';
   mainTemp.innerText = '';
   localTime.innerText = '';
+  // empty frames
   firstLi1.innerText = '';
   firstLi2.innerText = '';
   firstLi3.innerText = '';
   firstLi4.innerText = '';
   firstLi5.innerText = '';
-  iconFrame.style.backgroundImage = '';
   frames.forEach((frame) => {
     const lis = frame.querySelectorAll('li');
     lis.forEach(li => li.innerText = '');
@@ -352,21 +361,48 @@ function getForecast(url) {
       empty();
     });
 }
-function createUrl(entry) {
-  // const array = entry.split(' '); console.log(array,array[0])
-  // const locality = `q=${array[0]},${array[1]}`; console.log(locality)
-  const locality = `q=+${entry}+`;
-  currentWeather(`${urlWeather}${locality}${key}${lang}`);
-  getForecast(`${urlForecast}${locality}${key}${lang}`);
+function createUrl(entry, cond) {
+  if (cond === geo) {
+    currentWeather(`${urlWeather}${entry}${key}${lang}`);
+    getForecast(`${urlForecast}${entry}${key}${lang}`);
+  } else {
+    const locality = `q=+${entry}+`;
+    currentWeather(`${urlWeather}${locality}${key}${lang}`);
+    getForecast(`${urlForecast}${locality}${key}${lang}`);
+  }
+}
+function getLocation() {
+  function getPos(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    const id = `lat=${lat}&lon=${lon}`;
+    createUrl(id, geo);
+  }
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(getPos);
+  } else {
+    alert('géolocalisation indisponible');
+  }
 }
 // event listeners
-form.addEventListener('submit', function sub(evt) {
+form.forEach(item => item.addEventListener('submit', function sub(evt) {
   evt.preventDefault();
-  const entry = this.querySelector('[name=choix]').value;
-  empty();
-  createUrl(entry);
-});
+  if (evt.target.id === 'byCity') {
+    const entry = this.querySelector('[name=choix]').value;
+    createUrl(entry);
+  } else if (evt.target.id === 'byCoords') {
+    const coords = (this.querySelector('[name=choix]').value).split(' ');
+    const id = `lat=${coords[0]}&lon=${coords[1]}`;
+    createUrl(id, geo);
+    }
+  }));
 close.addEventListener('click', () => {
   errorFrame.style.display = 'none';
 });
-
+refresh.addEventListener('click', ()=> {
+  inputs.forEach(input=> input.value = '');
+  results.style.display = 'none';
+  main.style.display = 'flex';
+  empty();
+});
+geo.addEventListener('click', getLocation);
