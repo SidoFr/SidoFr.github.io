@@ -221,14 +221,18 @@ function empty() {
 }
 // display temps actuel
 function currentWeather(url) {
-  $.getJSON(url, (data) => {
+  $.getJSON(url, (data) => // {console.log(data);
+    main.style.display = 'none';
+    results.style.display = 'flex';
     // display données principales ds le cadre pal
+    const city = data.name;
     const weather = data.weather[0];
     const code = weather.id;
     const stamp = data.dt * 1000;
     const temperatures = data.main;
     const celsius = Math.round(temperatures.temp - 273.15);
     const icone = displayIcon(stamp, code.toString());
+    ville.innerText = city;
     iconFrame.style.backgroundImage = icone;
     conditions.innerText += `${weather.description}`;
     mainTemp.innerText += `${celsius}°C`;
