@@ -237,16 +237,6 @@ ul {
 	font-size: 1.3em;
 	padding: 5px;
 }
-.miniBox {
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-}
-.miniImg {
-	width: 40px;
-	height: 40px;
-	background-size: cover;
-}
 #frame1 span, #frame1 .liste li:first-of-type {
 	color: #FFFC15;
 }
