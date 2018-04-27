@@ -221,7 +221,7 @@ function empty() {
 }
 // display temps actuel
 function currentWeather(url) {
-  $.getJSON(url, (data)) => // console.log(data);
+  $.getJSON(url, (data) => {// console.log(data);
     main.style.display = 'none';
     results.style.display = 'flex';
     // display données principales ds le cadre pal
