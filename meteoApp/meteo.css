@@ -51,6 +51,18 @@ header h2 {
 	-webkit-box-shadow: 0 0 10px #FFFD68;
 	        box-shadow: 0 0 10px #FFFD68;
 }
+.btn {
+	outline: none;
+	color: #2f80ed;
+	border-color: #2f80ed;
+	background-image: -webkit-gradient(linear, left top, right top, from(#fefcea),to(#f1da36));
+	background-image: -webkit-linear-gradient(left, #fefcea 0%,#f1da36 100%);
+	background-image: -o-linear-gradient(left, #fefcea 0%,#f1da36 100%);
+	background-image: linear-gradient(to right, #fefcea 0%,#f1da36 100%);
+	font-family: 'Indie Flower', cursive;
+	border-radius: 5px;
+	cursor: pointer;
+}
 /* cadre erreur 404 */
 body > div:last-of-type {
 	position: absolute;
@@ -76,34 +88,14 @@ ul {
 .main {
 	padding-top: 5px;
 }
-.main p {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.2em;
-	margin: 10px 0;
+.main > div {
+	margin-bottom: 25px;
 }
-.main > div:first-of-type {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-}
-.img {
-	width: 75px;
-	height: 51px;
-	background-size: cover;
-}
-.main > p:first-child {
+.accueil {
 	font-family: 'Indie Flower', cursive;
 	font-size: 1.4em;
-}
-.main form {
-	margin-bottom: 20px;
+	margin: 5px 0;
+	text-align: center;
 }
 .main input:first-child {
 	background-image: -webkit-gradient(linear, left top, right top, from(#fefcea),to(#f1da36));
@@ -111,15 +103,14 @@ ul {
 	background-image: -o-linear-gradient(left, #fefcea 0%,#f1da36 100%);
 	background-image: linear-gradient(to right, #fefcea 0%,#f1da36 100%);
 	min-height: 40px;
-	margin-top: 10px;
-	border-radius: 3px;
+	border-radius: 5px;
 	text-align: center;
 }
 .main input:last-of-type {
 	border-color: #2f80ed;
 	margin: 0 10px;
 	min-height: 30px;
-	border-radius: 3px;
+	border-radius: 5px;
 	text-align: center;
 	background-image: -webkit-gradient(linear, left top, right top, from(#56ccf2), to(#2f80ed));
 	background-image: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
@@ -127,6 +118,33 @@ ul {
 	background-image: linear-gradient(to right, #56ccf2, #2f80ed);
 	font-family: 'Indie Flower', cursive;
 	font-size: 1.05em;
+}
+.btn[id=geo] {
+	width: 155px;
+	height: 40px;
+	font-size: 1.1em;
+}
+/* cadre principal -> résultats */
+.inside {
+	display: none;
+}
+.inside h2 {
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.7em;
+	text-transform: uppercase;
+}
+.inside p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+	margin: 10px 0;
+}
+.img {
+	width: 75px;
+	height: 51px;
+	background-size: cover;
+}
+.btn[id=refresh] {
+	margin: 15px 0;
 }
 /* cadre slider */
 .container {
