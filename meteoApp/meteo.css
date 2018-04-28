@@ -176,6 +176,16 @@ ul {
 	        flex: 1 0 55%;
 	text-align: center;
 }
+.miniBox {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+.miniImg {
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+}
 #frame1 {background-color: #0488d1;}
 #frame2 {background-color: #049fb9;}
 #frame3 {background-color: #02b4a2;}
