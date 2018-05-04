@@ -39,6 +39,7 @@ function displayCD(time) {
   const displayMin = `${minutes < 10 ? `0${minutes}:` : `${minutes}:`}`;
   const displaySec = `${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
   compteur.innerText = `${displayHr}${displayMin}${displaySec}`;
+  document.title = `${displayHr}${displayMin}${displaySec}`;
   // display texte
   text.style.display = 'block';
   currentTime.innerText = displayNow();
