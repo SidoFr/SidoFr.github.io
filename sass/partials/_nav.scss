@@ -2,7 +2,7 @@
 @import '_variables';
 
 .nav {
-    min-height: $vh_height;
+    min-height: $vh_height / 2;
     display: flex;
     flex-direction: column;
     @media #{$tablette} {
@@ -12,12 +12,9 @@
         min-height: 0;
     }
     .menu {
-        margin-top: $vh_height / 1.5;
+        margin-top: 200px 0 100px 0;
         @media#{$phone, $tablette} {
             margin-top: 0;
-        }
-        @media #{$big} {
-            margin-top: 200px;
         }
         .menu__list {
             list-style-type: none;
