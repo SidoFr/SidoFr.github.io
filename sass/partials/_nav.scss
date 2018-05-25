@@ -11,9 +11,6 @@
     @media #{$phone} {
         min-height: 0;
     }
-    @media #{$big} {
-        min-height: 50vh;
-    }
     .menu {
         margin-top: $vh_height / 1.5;
         @media#{$phone, $tablette} {
