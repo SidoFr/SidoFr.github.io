@@ -1,0 +1,109 @@
+// imports
+@import 'partials/_normalize';
+@import 'partials/_nav';
+@import 'partials/_main';
+@import 'partials/_secondary';
+@import 'partials/_icons';
+@import 'partials/_animations';
+@import 'partials/_mixins';
+@import 'partials/_variables';
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    background-image: $blue_grad;
+    header {
+    @include column-center;
+    justify-content: center;
+    min-height: $vh_height;
+    background-image: $blue_grad;
+    color: $dark;
+        h1, h3 {
+            font-family: $raleway;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin: 18px 0;
+        }
+        p {
+            font-family: $dancing;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            transform: scale(1.1);
+        }
+    }
+    footer {
+        margin-top: 200px;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        line-height: 1.5em;
+        background-image: $blue_grad;
+        font-family: $amatic;
+        a {
+            color: black;
+        }
+        a:last-child {
+            color: pink;
+        }
+        @media #{$phone} {
+            margin-top: 45px;
+        }
+        @media #{$tablette} {
+            margin-top: 120px;
+        }
+    }
+    .body__arrowframe {
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        .body__arrow {
+            position: absolute;
+            right: 45px;
+            top: 600px;
+            width: 20px;
+            height: 40px;
+            opacity: 0.5;
+            background-color: $cloud;
+            background-attachment: fixed;
+            display: none;
+            div:first-child {
+                border: 20px solid $cloud;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                position: absolute;
+                top: -40px;
+                right: -10px;
+            }
+        }
+    }
+    .back__container {
+        @include column-center;
+        margin-top: 30px;
+        font-family: $raleway;
+        color: $dark_grey;
+        ul {
+            list-style-type: none;
+            a {
+                color: $dark_grey;
+                font-family: $dancing;
+                font-size: 1.3em;
+                text-decoration: none;
+            }
+        }
+        a {
+            color: $holiday_yel;
+        }
+    }
+}
+

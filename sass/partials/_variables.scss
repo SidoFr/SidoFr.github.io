@@ -1,0 +1,28 @@
+// fonts
+$dancing: 'Dancing Script', cursive;
+$raleway: 'Raleway', sans-serif;
+$amatic: 'Amatic SC', cursive;
+// gradients & colors
+$blue_grad:  linear-gradient(to right, #00b4db, #0083b0);
+$light_blue: #00b4db;
+$blue: #0083b0;
+$blue_mid: #009DC7;
+$holiday_grad: linear-gradient(to right, #00c3ff, #ffff1c);
+$holiday_blue: #00c3ff;
+$holiday_liteb: #4AD4BD;
+$holiday_mid: #7BE091;
+$holiday_green: #B4ED5F;
+$holiday_yel: #ffff1c;
+$fcc_green: #006400;
+$cloud: #F5F3F2;
+$dark: #3C3B3F;
+$dark_grey: #212121;
+$twitter_blue: #0d95e8;
+//
+$vh_height: 100vh;
+$test_border: 1px solid red;
+$black_shadow: 20px 20px 10px -7px $dark; // x y blur spread
+// ➜ ❗ ✶
+// media queries variables
+$phone: 'only screen and (min-width: 320px) and (max-width: 736px)';
+$tablette: 'only screen and (min-width: 768px) and (max-width: 1024px)';

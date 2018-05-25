@@ -1,0 +1,91 @@
+@import '_mixins';
+@import '_variables';
+
+.nav {
+    min-height: $vh_height;
+    display: flex;
+    flex-direction: column;
+    @media #{$tablette} {
+        min-height: 200px;
+    }
+    @media #{$phone} {
+        min-height: 0;
+    }
+    .menu {
+        margin-top: $vh_height / 1.5;
+        @media#{$phone, $tablette} {
+            margin-top: 0;
+        }
+        .menu__list {
+            list-style-type: none;
+            padding: 30px 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            border-top: 10px solid $blue;
+            @media #{$tablette} {
+                padding: 15px 0 0 0;
+            }
+            @media #{$phone} {
+                flex-direction: column;
+            }
+        }
+        .menu__list li {
+            @include column-center;
+            padding: 15px;
+            border: 2px solid $holiday_mid;
+            border-radius: 20px;
+            position: relative;
+            background-color: $holiday_blue;
+            .menu__list__dropdown {
+                border-radius: 40px;
+                min-width: 230px;
+                padding: 10px;
+                margin: 0 15px;
+                position: absolute;
+                bottom: 100px;
+                display:none;
+                background-color: $holiday_yel;
+                transition: all 0.3s;
+                line-height: 1.3em;
+                .menu__list__arrow > div:nth-child(2) {
+                    width: 30px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: $holiday_mid;
+                    position: absolute;
+                    bottom: -37px;
+                    left: 104px;
+                }
+                .menu__list__arrow > div:last-child {
+                    width: 45px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $holiday_green;
+                    position: absolute;
+                    bottom: -21px;
+                    left: 96px;
+                }
+                .menu__list__arrow > div:first-child {
+                    width: 20px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $holiday_liteb;
+                    position: absolute;
+                    bottom: -48px;
+                    left: 109px;
+                }
+                p {
+                    color: $dark;
+                }
+            }
+            a {
+                color: $holiday_green;
+            }
+            @media #{$phone} {
+                margin: 0 5px;
+            }    
+        }
+    }
+
+}

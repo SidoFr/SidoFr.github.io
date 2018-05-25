@@ -1,0 +1,348 @@
+/* ***FCC***************************
+************************************ */
+@import 'mixins';
+$dark_hair:0px 3px 1px #452615;
+
+.F {
+    width: 60px;
+    height: 140px;
+    margin: 20px 0;
+    position: relative;
+    .F__one, .F__two, .F__three {
+       @include letters;
+    }
+    .F__one {
+        width: 30px;
+        height: 140px; 
+    }
+    .F__two {
+        width: 60px;
+        height: 35px;
+        position: absolute;
+        top: 0px;
+        left: 1px;
+    }
+    .F__three {
+        width: 45px;
+        height: 35px;
+        position: absolute;
+        top: 52px;
+        left: 1px;
+    }
+}
+.C-first {
+    width: 60px;
+    height: 140px;
+    margin: 20px 0 20px 32px;
+    position: relative;
+    .C-first__one, .C-first__two, .C-first__three {
+        @include letters;
+    }
+    .C-first__one {
+        width: 30px;
+        height: 140px; 
+    }
+    .C-first__two, .C-first__three {
+        width: 60px;
+        height: 35px;
+        position: absolute;
+    }
+    .C-first__two {
+        top: 0px;
+        left: 1px;
+    }
+    .C-first__three {
+        top: 105px;
+        left: 1px;
+    }
+}
+.C-two {
+    width: 60px;
+    height: 140px;
+    margin: 20px 0 20px 32px;
+    position: relative;
+    .C-two__one, .C-two__two, .C-two__three {
+        @include letters;
+    }
+    .C-two__one {
+        width: 30px;
+        height: 140px; 
+    }
+    .C-two__two, .C-two__three {
+        width: 60px;
+        height: 35px;
+        position: absolute;
+    }
+    .C-two__two {
+        top: 0px;
+        left: 1px;
+    }
+    .C-two__three {
+        top: 105px;
+        left: 1px;
+    }
+}
+
+/* ***my avatar*********************
+************************************ */
+.head {
+    width: 160px;
+    height: 160px;
+    border-radius: 90px;
+    margin: 20px;
+    background-color: #ffceab;
+    position: relative;
+    .eye {
+        width: 10px;
+        height: 10px;
+        border-radius: 90px;
+        background-color: #452615;
+        transition: all ease-in-out 0.3s;
+    }
+    .eye:after {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: #764d2c;
+        position: absolute;
+        transition: all ease-in-out 0.3s;
+    }
+    .eye:before {
+        display: block;
+        content: "";
+        border: 20px solid pink;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 31px;
+        transition: all ease-in-out 0.3s;
+    }
+    .left-eye {
+        position: absolute;
+        top: 50px;
+        left: 55px;
+    }
+    .right-eye {
+        position: absolute;
+        top: 50px;
+        right : 50px;
+    }
+    .left-eye:after {
+        top: -11px;
+        left: -15px;
+        transform: rotate(2deg);
+    }
+    .right-eye:after {
+        top: -11px;
+        left: -5px;
+        transform: rotate(-2deg);
+    }
+    .left-eye:before {
+        left: -30px;
+        transform: rotate(10deg);
+    }
+    .right-eye:before {
+        left: 0px;
+        transform: rotate(-10deg);
+    }
+    .mouth {
+        width: 0;
+        height: 0;
+        border: 12px solid #f72f31;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 123px;
+        left: 70px;
+        transition: all ease-in-out 0.3s;
+    }
+        .mouth > div:first-child {
+            width: 0;
+            height: 0;
+            border: 7px solid #f72f31;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            position: absolute;
+            top: -26px;
+            left: -12px; 
+            transform: rotate(8deg);
+        }
+        .mouth > div:last-child {
+            width: 0;
+            height: 0;
+            border: 7px solid #f72f31;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            position: absolute;
+            top: -26px;
+            left: -3px; 
+            transform: rotate(-8deg);
+        }
+}
+.hair {
+    width: 145px;
+    height: 42px;
+    background-color: #764d2c;
+    border-radius: 46%;
+    position: absolute;
+    left: 20px;
+    top: 23px;
+    transform: rotate(-15deg);
+    box-shadow: $dark_hair;
+}
+.hair > div:first-child {
+    width: 155px;
+    height: 60px;
+    background-color: #764d2c;
+    border-radius: 50%;
+    position: absolute;
+    left: 60px;
+    top: 64px;
+    transform: rotate(93deg);
+    box-shadow: inset 0px 3px 3px #452615,
+    0px 3px 3px #452615;
+}
+.hair > div:first-child:after {
+    display: block;
+    content: "";
+    width: 95px;
+    height: 30px;
+    border-radius: 38%;
+    position: absolute;
+    left: 28px;
+    top: 11px;
+    background-color: #764d2c;
+    box-shadow: inset 0px 6px 1px #452615;
+    transform: rotate(-1deg);
+}
+.hair > div:first-child:before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 34px;
+    border-radius: 35%;
+    position: absolute;
+    left: 103px;
+    top: 27px;
+    background-color: #764d2c;
+    transform: rotate(15deg);
+}
+.hair > div:last-child {
+    width: 127px;
+    height: 56px;
+    background-color: #764d2c;
+    border-radius: 50%;
+    position: absolute;
+    left: -59px;
+    top: 44px;
+    transform: rotate(-66deg);
+    box-shadow:inset 0px 3px 3px #452615;
+}
+.hair > div:last-child:before {
+    display: block;
+    content: "";
+    width: 58px;
+    height: 32px;
+    border-radius: 34%;
+    position: absolute;
+    left: 1px;
+    top: 25px;
+    background-color: #764d2c;
+    transform: rotate(-7deg);
+}
+.hair > div:last-child:after {
+    display: block;
+    content: "";
+    width: 82px;
+    height: 30px;
+    border-radius: 40%;
+    position: absolute;
+    left: 56px;
+    top: 20px;
+    background-color: #764d2c;
+    box-shadow: $dark_hair;
+    transform: rotate(17deg);
+}
+.hair > div:nth-child(2) {
+    width: 115px;
+    height: 47px;
+    border-radius: 50%;
+    background-color: #764d2c;
+    position: absolute;
+    left: 24px;
+    top: -9px;
+    transform: rotate(10deg);
+    box-shadow: inset 0px 1px 1px #452615;
+}
+.box__icon span {
+    font-size: 10em;
+}
+/* *********** avatars icons ***********/
+.box__anim {
+    position: relative;
+}
+.box__anim__rainbow {
+    position: absolute;
+    top: 7px;
+    left: -143px;
+    font-size: 5em;
+    display: none;
+    opacity: 0.9;
+    transform: rotate(-10deg);
+    transition: all ease-in-out 0.3s;
+}
+/* *******************:hover****************
+******************************************** */
+
+.box:hover {
+    .box__anim__rainbow {
+        display: block;
+    }
+    .head .eye {
+        width: 20px;
+        height: 6px;
+    }
+    .head .left-eye {
+        left: 53px;
+        transform: rotate(4deg);
+    }
+   .head .right-eye {
+        right: 43px;
+        transform: rotate(-4deg);
+    }
+    .head .eye:before {
+        top: 22px;
+        border: 20px solid #fc536f;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+    .head .left-eye:before {
+       left: -20px;
+       transform: rotate(-6deg);
+    }
+    .head .right-eye:before {
+        left: -2px;
+        transform: rotate(6deg);
+    }
+    .head .left-eye:after {
+        left: -10px;
+        transform: rotate(-4deg);
+    }
+    .head .right-eye:after {
+        left: 0px;
+        transform: rotate(4deg);
+    }
+    .mouth > div:first-child {
+        transform: rotate(4deg);
+    }
+    .mouth > div:last-child {
+        transform: rotate(-4deg);
+    }
+}

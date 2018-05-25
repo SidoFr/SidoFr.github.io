@@ -1,0 +1,64 @@
+@import '_mixins';
+@import '_variables';
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: $dark_grey;
+    .box-certif {
+        width: 320px;
+        height: 350px;
+        margin: 20px;
+        text-align: center;
+        box-shadow: $black_shadow;
+        border-radius: 20px;
+        padding: 5px;
+        font-family: $raleway;
+        text-transform: uppercase;
+    }
+    .box-certif img {
+        width: 98%;
+        margin-top: 5px;
+    }
+    .box {
+        @include column-center;
+        box-shadow: $black_shadow;
+        width: 320px;
+        height: 350px;
+        margin: 20px;
+        border-radius: 20px;
+        a {
+            color: $dark_grey;
+            text-decoration: none;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+        .box__icon {
+            width: 200px;
+            height: 200px;
+            padding: 7px;
+            display: flex;
+            position: relative;
+            i {
+                width: 100%;
+            }
+        }
+        .box__pitch {
+            @include column-center;
+            text-align: center;
+            font-size: 1.1em;
+            font-family: $dancing;
+            .box__pitch__title {
+                font-family: $raleway;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+        }
+    }
+    .box, .box-certif {
+        background-color: $light_blue;
+    }
+}

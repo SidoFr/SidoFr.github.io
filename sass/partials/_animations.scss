@@ -1,0 +1,28 @@
+
+.box:hover {
+    .box__icon .F, .box__icon .C {
+        animation: shake 1s;
+        .F__one, .F__two, .F__three,
+        .C-first__one, .C-first__two, .C-first__three,
+        .C-two__one, .C-two__two, .C-two__three {
+            background-color: $fcc_green;
+        }
+    }
+    .box__icon__fire {
+        animation: shake 1s;
+    }
+    @keyframes shake {
+        from, to {
+        transform: translate3d(0, 0, 0);
+        }
+        10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-10px, 0, 0);
+        }
+        20%, 40%, 60%, 80% {
+        transform: translate3d(10px, 0, 0);
+        }
+    }
+}
+
+
+
