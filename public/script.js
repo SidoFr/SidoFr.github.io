@@ -56,7 +56,6 @@ function detectDevice() {
  const device = detectDevice();
 
 menu_li.forEach(elt => elt.addEventListener('mouseover', function(evt) {
-    console.log(device)
     if (this.querySelector('.menu__list__dropdown') && !device) { 
         const drop = this.querySelector('.menu__list__dropdown');
         drop.style.display = 'block';
