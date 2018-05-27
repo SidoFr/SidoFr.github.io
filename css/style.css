@@ -513,6 +513,10 @@ template {
   .F .F__one, .F .F__two, .F .F__three {
     background-color: #3C3B3F;
     border-radius: 15px; }
+    @media only screen and (min-width: 320px) and (max-width: 736px), only screen and (min-width: 768px) and (max-width: 1024px) {
+      .F .F__one, .F .F__two, .F .F__three {
+        background-color: #006400;
+        border-radius: 15px; } }
   .F .F__one {
     width: 30px;
     height: 140px; }
@@ -537,6 +541,10 @@ template {
   .C-first .C-first__one, .C-first .C-first__two, .C-first .C-first__three {
     background-color: #3C3B3F;
     border-radius: 15px; }
+    @media only screen and (min-width: 320px) and (max-width: 736px), only screen and (min-width: 768px) and (max-width: 1024px) {
+      .C-first .C-first__one, .C-first .C-first__two, .C-first .C-first__three {
+        background-color: #006400;
+        border-radius: 15px; } }
   .C-first .C-first__one {
     width: 30px;
     height: 140px; }
@@ -559,6 +567,10 @@ template {
   .C-two .C-two__one, .C-two .C-two__two, .C-two .C-two__three {
     background-color: #3C3B3F;
     border-radius: 15px; }
+    @media only screen and (min-width: 320px) and (max-width: 736px), only screen and (min-width: 768px) and (max-width: 1024px) {
+      .C-two .C-two__one, .C-two .C-two__two, .C-two .C-two__three {
+        background-color: #006400;
+        border-radius: 15px; } }
   .C-two .C-two__one {
     width: 30px;
     height: 140px; }

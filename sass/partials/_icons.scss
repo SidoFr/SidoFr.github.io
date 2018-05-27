@@ -10,6 +10,9 @@ $dark_hair:0px 3px 1px #452615;
     position: relative;
     .F__one, .F__two, .F__three {
        @include letters;
+       @media #{$phone, $tablette} {
+           @include greenLetters;
+       }
     }
     .F__one {
         width: 30px;
@@ -37,6 +40,9 @@ $dark_hair:0px 3px 1px #452615;
     position: relative;
     .C-first__one, .C-first__two, .C-first__three {
         @include letters;
+        @media #{$phone, $tablette} {
+            @include greenLetters;
+        }
     }
     .C-first__one {
         width: 30px;
@@ -54,7 +60,7 @@ $dark_hair:0px 3px 1px #452615;
     .C-first__three {
         top: 105px;
         left: 1px;
-    }
+    }  
 }
 .C-two {
     width: 60px;
@@ -63,6 +69,9 @@ $dark_hair:0px 3px 1px #452615;
     position: relative;
     .C-two__one, .C-two__two, .C-two__three {
         @include letters;
+        @media #{$phone, $tablette} {
+            @include greenLetters;
+        }
     }
     .C-two__one {
         width: 30px;
