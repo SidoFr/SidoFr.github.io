@@ -22,7 +22,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            border-top: 10px solid $blue;
+            border-top: 5px solid $twitter_blue;
             @media #{$tablette} {
                 padding: 15px 0 0 0;
             }
@@ -33,7 +33,7 @@
         .menu__list li {
             @include column-center;
             padding: 15px;
-            border: 2px solid $holiday_mid;
+            border: 2px solid $holiday_yel;
             border-radius: 20px;
             position: relative;
             background-color: $holiday_blue;
@@ -80,7 +80,7 @@
                 }
             }
             a {
-                color: $holiday_green;
+                color: $holiday_yel;
             }
             @media #{$phone} {
                 margin: 0 5px;

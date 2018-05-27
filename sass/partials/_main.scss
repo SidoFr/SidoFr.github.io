@@ -7,15 +7,14 @@
     justify-content: space-evenly;
     color: $dark_grey;
     .box-certif {
-        width: 320px;
-        height: 350px;
+        width: 335px;
+        height: 380px;
         margin: 20px;
         text-align: center;
         box-shadow: $black_shadow;
         border-radius: 20px;
         padding: 5px;
         font-family: $raleway;
-        text-transform: uppercase;
     }
     .box-certif img {
         width: 98%;
@@ -24,8 +23,8 @@
     .box {
         @include column-center;
         box-shadow: $black_shadow;
-        width: 320px;
-        height: 350px;
+        width: 335px;
+        height: 380px;
         margin: 20px;
         border-radius: 20px;
         a {
@@ -48,17 +47,19 @@
         .box__pitch {
             @include column-center;
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-family: $dancing;
+            color: $dark;
             .box__pitch__title {
                 font-family: $raleway;
                 font-weight: bold;
                 text-transform: uppercase;
                 text-decoration: underline;
+                color:$holiday-yel;
             }
         }
     }
     .box, .box-certif {
-        background-color: $light_blue;
+        background-color: $twitter_blue;
     }
 }

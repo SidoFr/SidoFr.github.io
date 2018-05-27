@@ -10,17 +10,17 @@
 
 body {
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: $raleway;
     position: relative;
-    background-image: $blue_grad;
+    background-image: $darkb_grad;
     header {
     @include column-center;
     justify-content: center;
     min-height: $vh_height;
-    background-image: $blue_grad;
-    color: $dark;
+    background-image: $darkb_grad;
         h1, h3 {
             font-family: $raleway;
+            color: $dark;
         }
         h1 {
             font-size: 3em;
@@ -32,6 +32,8 @@ body {
         }
         p {
             font-family: $dancing;
+            font-size: 1.1em;
+            color: $dark;
         }
         a {
             text-decoration: none;
@@ -47,7 +49,7 @@ body {
         padding-top: 50px;
         padding-bottom: 20px;
         line-height: 1.5em;
-        background-image: $blue_grad;
+        background-image: $darkb_grad;
         font-family: $amatic;
         a {
             color: black;

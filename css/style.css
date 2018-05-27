@@ -308,7 +308,7 @@ template {
     .nav {
       min-height: 0; } }
   .nav .menu {
-    margin: 200px 0 100px 0; }
+    margin-top: 200px 0 100px 0; }
     @media only screen and (min-width: 320px) and (max-width: 736px), only screen and (min-width: 768px) and (max-width: 1024px) {
       .nav .menu {
         margin-top: 0; } }
@@ -318,7 +318,7 @@ template {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      border-top: 10px solid #0083b0; }
+      border-top: 5px solid #0d95e8; }
       @media only screen and (min-width: 768px) and (max-width: 1024px) {
         .nav .menu .menu__list {
           padding: 15px 0 0 0; } }
@@ -330,7 +330,7 @@ template {
       flex-direction: column;
       align-items: center;
       padding: 15px;
-      border: 2px solid #7BE091;
+      border: 2px solid #ffff1c;
       border-radius: 20px;
       position: relative;
       background-color: #00c3ff; }
@@ -372,7 +372,7 @@ template {
         .nav .menu .menu__list li .menu__list__dropdown p {
           color: #3C3B3F; }
       .nav .menu .menu__list li a {
-        color: #B4ED5F; }
+        color: #ffff1c; }
       @media only screen and (min-width: 320px) and (max-width: 736px) {
         .nav .menu .menu__list li {
           margin: 0 5px; } }
@@ -383,15 +383,14 @@ template {
   justify-content: space-evenly;
   color: #212121; }
   .main .box-certif {
-    width: 320px;
-    height: 350px;
+    width: 335px;
+    height: 380px;
     margin: 20px;
     text-align: center;
-    box-shadow: 20px 20px 10px -7px #3C3B3F;
+    box-shadow: 20px 20px 10px -7px #212121;
     border-radius: 20px;
     padding: 5px;
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase; }
+    font-family: "Raleway", sans-serif; }
   .main .box-certif img {
     width: 98%;
     margin-top: 5px; }
@@ -399,9 +398,9 @@ template {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 20px 20px 10px -7px #3C3B3F;
-    width: 320px;
-    height: 350px;
+    box-shadow: 20px 20px 10px -7px #212121;
+    width: 335px;
+    height: 380px;
     margin: 20px;
     border-radius: 20px; }
     .main .box a {
@@ -422,15 +421,17 @@ template {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      font-size: 1.1em;
-      font-family: "Dancing Script", cursive; }
+      font-size: 1.2em;
+      font-family: "Dancing Script", cursive;
+      color: #3C3B3F; }
       .main .box .box__pitch .box__pitch__title {
         font-family: "Raleway", sans-serif;
         font-weight: bold;
         text-transform: uppercase;
-        text-decoration: underline; }
+        text-decoration: underline;
+        color: #ffff1c; }
   .main .box, .main .box-certif {
-    background-color: #00b4db; }
+    background-color: #0d95e8; }
 
 .secondary {
   min-height: 100vh;
@@ -439,15 +440,15 @@ template {
   align-items: center;
   justify-content: space-evenly;
   margin-top: 50vh;
-  border-top: 10px solid #0083b0;
-  background-image: linear-gradient(to right, #00b4db, #0083b0); }
+  border-top: 5px solid #0d95e8;
+  background-image: linear-gradient(to left, #373b44, #4286f4); }
   .secondary .secondary__p {
     text-align: justify;
     line-height: 1.5em;
     padding: 80px 100px 50px 100px;
     font-family: "Dancing Script", cursive;
     font-size: 1.2em;
-    color: #3C3B3F; }
+    color: black; }
     @media only screen and (min-width: 320px) and (max-width: 736px) {
       .secondary .secondary__p {
         padding: 50px 20px; } }
@@ -457,7 +458,7 @@ template {
     align-items: center;
     padding: 5px;
     font-family: "Raleway", sans-serif;
-    color: #3C3B3F; }
+    color: #212121; }
     .secondary .secondary__comp .secondary__ul {
       list-style-type: none;
       padding: 0;
@@ -828,19 +829,19 @@ template {
     transform: translate3d(10px, 0, 0); } }
 body {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Raleway", sans-serif;
   position: relative;
-  background-image: linear-gradient(to right, #00b4db, #0083b0); }
+  background-image: linear-gradient(to left, #373b44, #4286f4); }
   body header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: linear-gradient(to right, #00b4db, #0083b0);
-    color: #3C3B3F; }
+    background-image: linear-gradient(to left, #373b44, #4286f4); }
     body header h1, body header h3 {
-      font-family: "Raleway", sans-serif; }
+      font-family: "Raleway", sans-serif;
+      color: #3C3B3F; }
     body header h1 {
       font-size: 3em;
       margin: 20px 0; }
@@ -848,7 +849,9 @@ body {
       font-size: 1.5em;
       margin: 18px 0; }
     body header p {
-      font-family: "Dancing Script", cursive; }
+      font-family: "Dancing Script", cursive;
+      font-size: 1.1em;
+      color: #3C3B3F; }
     body header a {
       text-decoration: none;
       color: black; }
@@ -860,7 +863,7 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     line-height: 1.5em;
-    background-image: linear-gradient(to right, #00b4db, #0083b0);
+    background-image: linear-gradient(to left, #373b44, #4286f4);
     font-family: "Amatic SC", cursive; }
     body footer a {
       color: black; }
