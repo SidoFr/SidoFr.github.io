@@ -776,49 +776,49 @@ template {
 
 /* *******************:hover****************
 ******************************************** */
-.box:hover .box__anim__rainbow {
+.hover:hover .box__anim__rainbow {
   display: block; }
-.box:hover .head .eye {
+.hover:hover .head .eye {
   width: 20px;
   height: 6px; }
-.box:hover .head .left-eye {
+.hover:hover .head .left-eye {
   left: 53px;
   transform: rotate(4deg); }
-.box:hover .head .right-eye {
+.hover:hover .head .right-eye {
   right: 43px;
   transform: rotate(-4deg); }
-.box:hover .head .eye:before {
+.hover:hover .head .eye:before {
   top: 22px;
   border: 20px solid #fc536f;
   border-right-color: transparent;
   border-left-color: transparent;
   border-bottom-color: transparent; }
-.box:hover .head .left-eye:before {
+.hover:hover .head .left-eye:before {
   left: -20px;
   transform: rotate(-6deg); }
-.box:hover .head .right-eye:before {
+.hover:hover .head .right-eye:before {
   left: -2px;
   transform: rotate(6deg); }
-.box:hover .head .left-eye:after {
+.hover:hover .head .left-eye:after {
   left: -10px;
   transform: rotate(-4deg); }
-.box:hover .head .right-eye:after {
+.hover:hover .head .right-eye:after {
   left: 0px;
   transform: rotate(4deg); }
-.box:hover .mouth > div:first-child {
+.hover:hover .mouth > div:first-child {
   transform: rotate(4deg); }
-.box:hover .mouth > div:last-child {
+.hover:hover .mouth > div:last-child {
   transform: rotate(-4deg); }
 
-.box:hover .box__icon .F, .box:hover .box__icon .C {
+.hover:hover .box__icon .F, .hover:hover .box__icon .C {
   animation: shake 1s; }
-  .box:hover .box__icon .F .F__one, .box:hover .box__icon .F .F__two, .box:hover .box__icon .F .F__three,
-  .box:hover .box__icon .F .C-first__one, .box:hover .box__icon .F .C-first__two, .box:hover .box__icon .F .C-first__three,
-  .box:hover .box__icon .F .C-two__one, .box:hover .box__icon .F .C-two__two, .box:hover .box__icon .F .C-two__three, .box:hover .box__icon .C .F__one, .box:hover .box__icon .C .F__two, .box:hover .box__icon .C .F__three,
-  .box:hover .box__icon .C .C-first__one, .box:hover .box__icon .C .C-first__two, .box:hover .box__icon .C .C-first__three,
-  .box:hover .box__icon .C .C-two__one, .box:hover .box__icon .C .C-two__two, .box:hover .box__icon .C .C-two__three {
+  .hover:hover .box__icon .F .F__one, .hover:hover .box__icon .F .F__two, .hover:hover .box__icon .F .F__three,
+  .hover:hover .box__icon .F .C-first__one, .hover:hover .box__icon .F .C-first__two, .hover:hover .box__icon .F .C-first__three,
+  .hover:hover .box__icon .F .C-two__one, .hover:hover .box__icon .F .C-two__two, .hover:hover .box__icon .F .C-two__three, .hover:hover .box__icon .C .F__one, .hover:hover .box__icon .C .F__two, .hover:hover .box__icon .C .F__three,
+  .hover:hover .box__icon .C .C-first__one, .hover:hover .box__icon .C .C-first__two, .hover:hover .box__icon .C .C-first__three,
+  .hover:hover .box__icon .C .C-two__one, .hover:hover .box__icon .C .C-two__two, .hover:hover .box__icon .C .C-two__three {
     background-color: #006400; }
-.box:hover .box__icon__fire {
+.hover:hover .box__icon__fire {
   animation: shake 1s; }
 @keyframes shake {
   from, to {
