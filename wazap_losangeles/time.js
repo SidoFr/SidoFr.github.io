@@ -39,6 +39,7 @@ const getLaTime = stamp => {
     (stamp >= oct22Fr && stamp <= nov22La)
   ) {
     laTime = today - 28800000; // -8hrs en ms
+    return laTime;
   }
   if (
     (stamp >= mars19La && stamp <= mars19Fr) ||
@@ -47,6 +48,7 @@ const getLaTime = stamp => {
     (stamp >= mars22La && stamp <= mars22Fr)
   ) {
     laTime = today - 36000000; // -10hrs en ms
+    return laTime;
   }
   laTime = today - 32400000; // - 9hrs en ms
   return laTime;
