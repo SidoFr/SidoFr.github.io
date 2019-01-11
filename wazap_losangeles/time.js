@@ -60,9 +60,10 @@ const months = ['décembre', 'janvier', 'février', 'mars', 'avril', 'mai', 'jui
 const getDate = stamp => {
   const day = week[new Date(stamp).getDay()];
   const date = new Date(stamp).toLocaleString('fr-FR').split(' ')[0];
-    const month = months[date.split('/')[1]].slice(0) === 0 ?
-    months[date.split('/')[1]].slice(1) :
-    months[date.split('/')[1]];
+  const rank = date.split('/')[1];
+  const month = rank === '12' ? months[0] : 
+    rank.slice(0,1) === '0' ? months[parseFloat(rank.slice(1))] :
+    months[parseFloat(rank)];
   const dateString = `${day} ${date.split('/')[0]} ${month} ${date.split('/')[2]}`;
   return dateString;
 };
