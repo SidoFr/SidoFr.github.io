@@ -12,12 +12,10 @@ body {
     box-sizing: border-box;
     font-family: $raleway;
     position: relative;
-    background-image: $darkb_grad;
     header {
     @include column-center;
     justify-content: center;
     min-height: $vh_height;
-    background-image: $darkb_grad;
         h1, h3 {
             font-family: $raleway;
             color: $dark;
